@@ -1,8 +1,12 @@
-# React + Vite
+# 어울링 페이지 리메이크
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+세종특별자치시에서 운영중인 공공자전거 '어울링'의 PC 홈페이지를 리메이크해보는 비영리 개인 프로젝트입니다.
 
-Currently, two official plugins are available:
+기존 웹사이트 : https://www.sejongbike.kr/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+'어울링'의 로고 및 색상 팔레트 등이 현재 바뀐 상태임에도 불구, PC 페이지는 현재 구형 그대로인 상태이기에
+코딩 공부에도 적합하다고 판단해 개인적으로 현재의 디자인을 활용해 리메이크해보고 있습니다.
+
+1. HTML + CSS + JavaScript로 메인 페이지 제작
+
+2. 만들어 놓은 메인 페이지를 React로 변환 및 추가 페이지 제작 중
