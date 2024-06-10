@@ -1,0 +1,212 @@
+*{
+  padding : 0px;
+  box-sizing : border-box;
+}
+
+body{
+  font-family: 'NanumSquareRound',sans-serif;
+}
+.container {
+  max-width : 660px;
+  margin : 0 auto;
+}
+
+/*상단 로고이미지*/
+.logopart{
+  width : 660px;
+  display : flex;
+  justify-content: center; 
+  margin : 0 auto;
+  padding-top : 108px; /*네이버 참고함*/
+  padding-bottom : 20px;
+}
+/*아이콘+텍스트*/
+#logohead{
+  display : flex; /*화면의 왼오차례대로 나타냄*/
+  text-decoration : none; /*하이퍼링크 글씨체안바뀜*/
+}
+/*로고텍스트*/
+#logotext{
+  text-align: center;
+  padding-left : 25px; /*로고왼쪽여백, 아이콘과 사이 간격*/
+  line-height: 100px; 
+  font-size : 50px;
+  font-weight : 800; /*매우굵게*/
+  color : rgb(51, 51, 51); /*로고글씨색*/    
+}
+
+/*메인로그인*/
+
+/*로그인*/
+/* 여러 요소에 같은 스타일 적용 */
+ul{
+  list-style: none;
+}
+
+/* 전반적인 스타일 */
+#content{
+  width: 600px;
+  height: 410px;
+  border : 2px solid rgb(117, 162, 255);
+  border-radius: 15px;
+  margin: 0 auto;
+  padding : 30px 50px;
+  }
+
+/* 아이디 입력창 */
+#login_Id{
+  width: 100%;
+  padding: 10px 20px;
+  margin: 20px 0px auto;
+  font-weight: 700; /*굵게*/
+  font-size : 20px;
+  color:rgb(116, 114, 114);
+  border : none; /*읿력칸 틀없앰*/
+  border-bottom: 2px solid rgb(116, 114, 114);
+}
+
+/* 비밀번호 입력창 */
+#login_Password{
+  width: 100%;
+  padding: 10px 20px;
+  margin: 20px auto;
+  font-weight: 700;
+  font-size : 20px;
+  color:rgb(116, 114, 114);
+  border : none;
+  border-bottom: 2px solid rgb(116, 114, 114);
+}
+
+/* 로그인 상태유지  */
+input[type="checkbox"] {
+  margin-top: 5px;
+}
+
+#check_btn + label{
+  cursor: default;  /*마우스 커서 기본값*/
+}
+
+#check_btn + label> span{
+  vertical-align: middle;
+  padding: 5px;
+  color:rgb(116, 114, 114);
+}
+
+/* label:before에 체크하기 전 상태 CSS */
+#check_btn + label:before{
+  content:""; /* 웹페이지 스타일을 지정할 때 사용함 */
+  display: inline-block;
+  width: 11px;
+  height:11px;
+  border:2px solid rgb(117, 162, 255);
+  border-radius: 4px;
+  vertical-align: middle;
+  }
+  
+/* label:before에 체크 된 상태 CSS */  
+#check_btn:checked + label:before{
+  content:"";
+  border-color:rgb(117, 162, 255);
+  background-color: rgb(117, 162, 255);
+  background-repeat: no-repeat; /*반복방법 지정*/
+  background-position: 50%;
+  /* background: url("C:/Java_code/Project_Front/sejongbike/img/checkbox.png"); */
+}
+
+#check_btn{
+  display: none; /* 기존 체크박스 tool 없앰 */
+}
+
+
+/* 로그인 버튼 */
+.login button{
+  width: 100%;
+  height: 60px;
+  margin-top: 35px;
+  background-color:rgb(117, 162, 255);
+  color:rgb(255, 255, 255);
+  font-size: 25px;
+  font-weight: 700;
+  border : none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* 아이디, 비밀번호, 회원가입 전반 */
+.infojoinbox{
+  height : 60px;
+  padding-top : 40px;
+}
+#User_Info{
+  display : flex;
+}
+.subContainer{
+  margin: 0px;
+}
+/* 아이디 찾기 버튼 */
+#left{
+  display : flex;
+  justify-content: flex-start;
+  width : 400px;
+  padding-top : 10px;
+}
+#User_id{
+  display : flex;
+  text-decoration: none;
+  color:rgb(116, 114, 114);
+}
+#User_password::before{
+  content : "|";
+  color:rgb(116, 114, 114);
+  font-weight: bold;
+  padding : 0px 10px;
+}
+/* 비밀번호 찾기 버튼 */
+#User_password{
+  display : flex;
+  text-decoration: none;  
+  color:rgb(116, 114, 114);
+}
+#right{
+  display : flex;
+  justify-content : flex-end;
+  width : 200px;
+  padding-top : 10px;
+}
+#User_join{
+  text-decoration: none;
+  color:rgb(116, 114, 114);
+  margin: 0px;
+}
+
+
+/*다른방법으로 로그인*/
+.bodybottom{
+  width: 660px;
+  /* border : 1px solid black; */
+  display : block;
+  margin : auto;   
+}
+#anotherlogin{
+  padding : 100px 0px 10px;
+  color:rgb(116, 114, 114);
+  text-align : center; /*글씨 가운데 정렬*/
+  justify-content: space-between;
+  display: flex;
+}
+.line{width: 30%;}
+.small{height: 50%;
+  border-bottom: 1px solid rgb(116, 114, 114);
+}
+/*sns로그인 아이콘*/
+#snslogin{
+  height : 130px;
+}
+#snsbox {
+  text-align: center;
+}
+#snsbox img{
+  width : 125px;
+  height : auto;
+  padding : 15px 25px;
+}   

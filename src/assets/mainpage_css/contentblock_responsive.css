@@ -1,0 +1,58 @@
+/* 반응형 - 910px 이하부터 */
+@media screen and (max-width: 910px) {
+
+  /* 컨텐츠 블록 영역 */
+  .contentBlock {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /* 컨텐츠 블록 영역 - 공지사항&질문 */
+  #board {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  #board > div > ul {
+    margin-left: 10px;
+  }
+  #board .plusButton {
+    margin-left: 0;
+  }
+  /* 컨텐츠 블록 영역 - 날씨 */
+  #weather {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+  }
+  #weather > #text {
+    margin: 0;
+  }
+  /* 컨텐츠 블록 영역 - 간격 */
+  #gap {
+    display: none;
+  }
+  /* 반응형 - 380px 이하로 줄어들 때 고정 */
+  @media screen and (max-width: 380px) {
+    /* 컨텐츠 블록 영역 */
+    .contentBlock {
+      width: 380px;
+    }
+    /* 컨텐츠 블록 영역 - 공지사항&질문 */
+    #board {
+      width: 380px;
+    }
+    /* 컨텐츠 블록 영역 - 날씨 */
+    #weather {
+      width: 380px;
+    }
+  }
+}

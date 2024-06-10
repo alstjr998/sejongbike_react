@@ -1,0 +1,48 @@
+/* 반응형 - 910px 이하부터 */
+@media screen and (max-width: 910px) {
+  /* 푸터 영역 */
+  footer {
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #sctc_logo {
+    width: 100vw;
+    height: 60px;
+    margin: 10px 0 0 0;
+  }
+  #sctc_logo > a > img {
+    height: 80%;
+    margin: 0;
+  }
+  #address {
+    width: 100vw;
+    margin: 0 auto;
+  }
+  #address > p {
+    text-align: center;
+    padding: 0;
+  }
+  #address > p:first-child {
+    padding-top: 0;
+  }
+  /* 반응형 - 380px 이하로 줄어들 때 고정 */
+  @media screen and (max-width: 380px) {
+    /* 푸터 영역 */
+    footer {
+      width: 380px;
+      flex-direction: column;
+      justify-content: center;
+    }
+    #sctc_logo {
+      width: 380px;
+      margin: 0;
+    }
+    #sctc_logo > a {
+      width: 380px;
+    }
+    #address {
+      width: 380px;
+    }
+  }
+}

@@ -1,0 +1,151 @@
+/* 컨텐츠 블록 영역 */
+.contentBlock {
+  width: 910px;
+  height: 230px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 컨텐츠 블록 영역 - 공지사항&질문 */
+#board {
+  width: 450px;
+  height: 100%;
+  margin: 0;
+}
+
+#board input[type="radio"] {
+  display: none;
+}
+
+#board label {
+  font-family: 'NanumSquareRound', sans-serif;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.46);
+  font-size: 27px;
+  line-height: 50px;
+  margin: 5px 10px 0 10px;
+  padding-left: 5px;
+  text-align: center;
+  border-left: 5px solid rgba(235, 87, 87, 0.167);
+}
+
+#board label:hover {
+  color: black;
+}
+
+#board input:checked + label {
+  color: rgb(38, 77, 155);
+  font-weight: 700;
+  border-left: 5px solid rgb(235, 87, 87);
+}
+
+#board .plusButton {
+  float: right;
+  margin: 20px 15px 0;
+  display: none;
+}
+
+#board .plusButton > a {
+  text-decoration: none;
+  color: rgb(41, 41, 41);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+#board .plusButton > a:hover {
+  text-decoration: underline;
+}
+
+#notice:checked ~ #plusButton_notice,
+#question:checked ~ #plusButton_question {
+  display: block;
+}
+
+/* 컨텐츠 블록 영역 - 공지사항&질문 하위 내용 */
+.tabContent {
+  display: none;
+}
+
+#board > div > ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+#board > div > ul > li {
+  padding: 6px 0;
+}
+
+#board > div > ul > li > a {
+  text-decoration: none;
+  color: black;
+  font-family: 'NanumSquareRound', sans-serif;
+  letter-spacing: 1px;
+}
+
+#board > div > ul > li > a:hover {
+  font-weight: 700;
+}
+
+#notice:checked ~ #noticetab,
+#question:checked ~ #questiontab {
+  display: block;
+}
+
+/* 컨텐츠 블록 영역 - 간격 */
+#gap {
+  width: 4px;
+  height: 90%;
+  margin: 0;
+  background-color: rgba(151, 151, 151, 0.212);
+}
+
+/* 컨텐츠 블록 영역 - 날씨 */
+#weather {
+  width: 450px;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+
+#weather > #text {
+  display: flex;
+  margin: 0 10px;
+}
+
+#weather > #text > #title {
+  font-family: 'NanumSquareRound', sans-serif;
+  text-decoration: none;
+  color: rgb(38, 77, 155);
+  font-size: 27px;
+  margin: 10px 10px 0 10px;
+  padding-left: 5px;
+  font-weight: 700;
+  border-left: 5px solid rgb(235, 87, 87);
+  width: 140px;
+  height: 30.4px;
+}
+
+#weather > a > img {
+  width: 80%;
+  margin: 0 0 0 60px;
+}
+
+#weather .plusButton {
+  margin: 20px 15px 0;
+}
+
+#weather .plusButton > a {
+  text-decoration: none;
+  color: rgb(41, 41, 41);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+#weather .plusButton > a:hover {
+  text-decoration: underline;
+}

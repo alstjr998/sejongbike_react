@@ -1,0 +1,42 @@
+/* 메인 영역 */
+.main {
+  width: 910px;
+  height: 355px;
+  display: flex;
+  border: 3px solid rgb(80, 109, 173);
+  border-radius: 2px;
+  margin-top: 15px;
+  box-sizing: border-box;
+  z-index: 5;
+}
+
+/* 메인 영역 - 캐러셀 */
+#carousel {
+  width: 620px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#images {
+  position: absolute;
+}
+
+/* 메인 영역 - 버튼 블록 */
+#buttons {
+  width: 290px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border-left: 3px solid rgb(80, 109, 173);
+}
+
+#buttons > a {
+  height: 50%;
+  margin: 0;
+}
+
+#buttons > a > img {
+  height: 100%;
+  z-index: -5;
+}

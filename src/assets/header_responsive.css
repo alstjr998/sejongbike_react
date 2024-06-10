@@ -1,0 +1,94 @@
+/* 반응형 - 910px 이하부터 */
+@media screen and (max-width: 910px) {
+  /* 헤더 영역 */
+  header {
+    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  header > #leftBlank,
+  header > #menuButton {
+    display: block;
+  }
+  header > #menuButton {
+    height: 100%;
+  }
+  header > #menuButton > a > img {
+    height: 40%;
+    margin-top: 77%;
+  }
+  /* 헤더 - 로고 영역 */
+  #logo {
+    width: 60vw;
+    margin-left: 40px;
+  }
+  #logo a {
+    justify-content: center;
+    height: 75px;
+  }
+  #logo a img {
+    margin-top: 8px;
+  }
+  #logo p {
+    margin-right: 20px;
+    font-size: 30px;
+  }
+  /* 헤더 - 네비게이션 메뉴 영역 */
+  .menu {
+    width: 100vw;
+    display: none;
+  }
+  .menu.active {
+    display: flex;
+  }
+  #nav > ul {
+    flex-direction: column;
+    border-top: 4px solid rgb(73, 104, 167);
+  }
+  #nav > ul > li {
+    width: 100vw;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    z-index: 10;
+    background-color: rgb(93, 121, 177);
+    border: 2px solid rgb(93, 121, 177);
+  }
+  #nav > ul > li > .textBox {
+    padding: 3px 10px;
+    border: none;
+  }
+  #nav > ul #li_menu1:hover > #ul_menu1,
+  #nav > ul #li_menu2:hover > #ul_menu2 {
+    display: none;
+  }
+  #nav > ul > li > div > a {
+    font-size: 19px;
+  }
+  #nav > ul > li:hover > div > a {
+    text-shadow: 0px 0px 7px rgb(36, 50, 79);
+  }
+  /* 반응형 - 380px 이하로 줄어들 때 고정 */
+  @media screen and (max-width: 380px) {
+    /* 헤더 영역 */
+    header {
+      width: 380px;
+      flex-wrap: wrap;
+    }
+    #logo {
+      width: 200px;
+      height: 100%;
+    }
+    #menuButton {
+      margin-left: 30px;
+      margin-right: 20px;
+    }
+    /* 헤더 - 네비게이션 메뉴 영역 */
+    #nav {
+      width: 380px;
+    }
+    #nav > ul > li {
+      width: 380px;
+    }
+  }
+}

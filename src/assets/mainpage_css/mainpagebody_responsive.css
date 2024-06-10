@@ -1,0 +1,64 @@
+/* 반응형 - 910px 이하부터 */
+@media screen and (max-width: 910px) {
+
+  /* 메인 영역 */
+  .main {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    border: 3px solid rgb(80, 109, 173);
+    border-radius: 2px;
+    margin-top: 15px;
+    box-sizing: border-box;
+    flex-direction: column;
+    z-index: 5;
+  }
+  /* 메인 영역 - 캐러셀 */
+  #carousel {
+    width: 100%;
+    height: 355px;
+    position: relative;
+  }
+  #images > img {
+    width: 100vw;
+    height: 355px;
+  }
+  /* 메인 영역 - 버튼 블록 */
+  #buttons {
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    background-color: rgba(150, 185, 255, 0.47);
+    border-top: 3px solid rgb(80, 109, 173);
+  }
+  #buttons > a {
+    height: 175px;
+  }
+  @media screen and (max-width: 585px) {
+    #buttons > a {
+      width: 50%;
+      height: auto;
+    }
+    #buttons > a > img {
+      width: 100%;
+    }
+  }
+  /* 반응형 - 380px 이하로 줄어들 때 고정 */
+  @media screen and (max-width: 380px) {
+    /* 메인 영역 */
+    .main {
+      width: 380px;
+    }
+    /* 메인 영역 - 캐러셀 */
+    #carousel {
+      width: 380px;
+    }
+    #images > img {
+      width: 380px;
+    }
+    /* 메인 영역 - 버튼 블록 */
+    #buttons {
+      width: 380px;
+    }
+  }
+}
