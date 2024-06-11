@@ -1,3 +1,88 @@
 .content {
-  
+  width: 910px;
+  margin-top: 25px;
+}
+
+/* 소개페이지-타이틀 */
+#pageTitle {
+  width: 910px;
+  font-size: 35px;
+  font-weight: 800;
+  margin-top: 25px;
+}
+
+#pageTitle > hr {
+  margin: 10px 0 20px;
+}
+
+/* 소개페이지-서브타이틀 */
+.infoSubTitle {
+  font-size: 28px;
+  font-weight: 800;
+  padding-left: 10px;
+  border-left: 5px solid rgb(235, 87, 87);
+}
+
+.context {
+  margin: 15px 15px;
+}
+
+.contentSubTitle {
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.description > p {
+  font-size: 16px;
+  line-height: 27px;
+}
+
+/* 뉴어울링 설명 */
+.descBox {
+  display: flex;
+  padding: 15px;
+}
+
+.imgContainer {
+  width: 300px;
+}
+
+.imgContainer > #eoulingImg {
+  width: 250px;
+  display: block;
+}
+
+.imgContainer > #eoulingDockerImg{
+  width: 150px;
+  display: block;
+}
+
+.imgContainer > p {
+  width: 50%;
+  margin: 10px auto;
+  padding: 5px 10px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+#newEouling {
+  background-color: #75a2ff;
+}
+
+#newEoulingDocker {
+  background-color: #37474f;
+}
+
+.textContainer {
+  width: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.textContainer > h3 {
+  margin: 0;
 }
