@@ -1,5 +1,7 @@
-import Footer from "../Footer";
-import Header from "../Header";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import './assets/index.css'
+import './assets/eoulinginfo_css/eoulinginfo.css'
 
 const EoulingInfo = () => {
 

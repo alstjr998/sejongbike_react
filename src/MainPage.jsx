@@ -4,7 +4,7 @@ import MainPageBody from './components/mainpage/MainPageBody';
 import ContentBlock from './components/mainpage/ContentBlock';
 import Footer from './components/Footer';
 
-const Home = () => (
+const MainPage = () => (
   <div>
     <Header />
     <MainPageBody />
@@ -13,4 +13,4 @@ const Home = () => (
   </div>
 );
 
-export default Home;
+export default MainPage;

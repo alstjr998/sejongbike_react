@@ -1,5 +1,5 @@
-import EoulingInfo from "./components/eoulinginfopage/EoulingInfo";
-import Home from "./Home";
+import EoulingInfo from "./EoulingInfo";
+import MainPage from "./MainPage";
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,7 +11,7 @@ const Outlet = () => {
   return(
     <Router>
       <Routes>
-        <Route index element={<Home />} />
+        <Route index element={<MainPage />} />
         <Route path="/eoulinginfo" element={<EoulingInfo />} />
         <Route path="/login" element={<Login />} />
         
