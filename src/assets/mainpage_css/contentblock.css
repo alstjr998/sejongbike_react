@@ -131,7 +131,7 @@
 }
 
 #weather .plusButton {
-  margin: 20px 15px 0;
+  margin: 22px 15px 0;
 }
 
 #weather .plusButton > a {
@@ -144,3 +144,29 @@
 #weather .plusButton > a:hover {
   text-decoration: underline;
 }
+
+.weatherBox {
+  display: flex;
+  width: 90%;
+}
+
+#icon {
+  width: 150px;
+}
+
+.tempDesc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tempDesc > #tempText {
+  font-size: 32px;
+  font-weight: 800;
+  text-align: left;
+}
+
+.tempDesc > #descText {
+  font-size: 20px;
+}
+
