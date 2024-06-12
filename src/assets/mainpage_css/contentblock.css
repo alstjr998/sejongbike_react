@@ -130,11 +130,6 @@
   height: 30.4px;
 }
 
-#weather > a > img {
-  width: 80%;
-  margin: 0 0 0 60px;
-}
-
 #weather .plusButton {
   margin: 20px 15px 0;
 }
