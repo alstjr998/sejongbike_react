@@ -8,7 +8,7 @@ const WeatherBox = () => {
   const [weather, setWeather] =useState(null);
 
   //날씨 API
-  const API_KEY = import.meta.env.VITE_WHEATER_API_KEY;
+  const API_KEY = import.meta.env.VITE_KISANG_API_KEY;
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
