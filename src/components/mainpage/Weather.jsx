@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import WeatherBox from './WeatherBox';
 
 const Weather = () => {
 
@@ -65,9 +66,7 @@ const Weather = () => {
       <div id="plusButton_weather" className="plusButton">
         <a href="https://weather.naver.com/">+더보기</a>
       </div>
-      <a href="https://weather.naver.com/" target="_blank" rel="noopener noreferrer">
-        <img src="/img/weather.png" alt="Weather" />
-      </a>
+      <WeatherBox />
     </div>
   );
 };
