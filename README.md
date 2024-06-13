@@ -14,6 +14,8 @@
 
 2. 메인 페이지에 OpenWeatherMap API를 이용하여 오늘의 날씨 정보를 표시하는 블록 완성
 
+  ※OpenWeatherMap API (https://openweathermap.org/)
+
   ※날씨 아이콘 활용 basmilus-Meteocons (https://github.com/basmilius/weather-icons)
 
 3. 메인 페이지 완성 후 다른 프론트 페이지 제작 중
