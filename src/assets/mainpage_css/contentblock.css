@@ -148,10 +148,11 @@
 .weatherBox {
   display: flex;
   width: 90%;
+  flex-wrap: wrap;
 }
 
 #icon {
-  width: 150px;
+  width: 140px;
 }
 
 .tempDesc {
@@ -168,5 +169,12 @@
 
 .tempDesc > #descText {
   font-size: 20px;
+}
+
+#apiText {
+  font-size: 9px;
+  color: #5d5d5d;
+  width: 100%;
+  text-align: right;
 }
 

@@ -43,6 +43,9 @@ const WeatherBox = () => {
         temp: temp,
         icon: weatherIconAddress,
       });
+
+      console.log(res.data);
+
     } catch (err) {
       console.error(err);
     }
@@ -56,6 +59,9 @@ const WeatherBox = () => {
       <div className="tempDesc">
         <p id="tempText">{weather?.temp}℃</p>
         <p id="descText">{weather?.description}</p>
+      </div>
+      <div id="apiText">
+        <p>※날씨 API 제공 : OpenWeatherMap</p>
       </div>
     </div>
   );
