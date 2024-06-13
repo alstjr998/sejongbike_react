@@ -20,17 +20,6 @@ const Weather = () => {
     color: 'rgba(0, 0, 0, 0.46)',
   };
 
-  //날씨 API
-  const API_KEY = import.meta.env.VITE_WHEATER_API_KEY;
-
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      let lat = position.coords.latitude;
-      let lon = position.coords.longitude;
-      getWeather(lat, lon);
-    });
-  }, []);
-
   return (
     <div id="weather">
       <div id="text">
