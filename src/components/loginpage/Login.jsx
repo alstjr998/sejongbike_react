@@ -56,7 +56,9 @@ const Login = () => {
           <div className="line">
             <div className="small"></div>
           </div>
-          <div>다른 방법으로 로그인하기</div>
+          <div id="anotherLoginText">
+            <p>다른 방법으로 로그인하기</p>
+          </div>
           <div className="line">
             <div className="small"></div>
           </div>

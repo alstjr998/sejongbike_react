@@ -13,7 +13,7 @@ body{
 
 /*상단 로고이미지*/
 .logopart{
-  width : 660px;
+  width : 500px;
   display : flex;
   justify-content: center; 
   margin : 0 auto;
@@ -45,7 +45,7 @@ ul{
 
 /* 전반적인 스타일 */
 #content{
-  width: 600px;
+  width: 500px;
   height: 410px;
   border : 2px solid rgb(117, 162, 255);
   border-radius: 15px;
@@ -56,11 +56,11 @@ ul{
 /* 아이디 입력창 */
 #login_Id{
   width: 100%;
-  padding: 10px 20px;
+  padding: 10px 15px;
   margin: 20px 0px auto;
   font-weight: 700; /*굵게*/
   font-size : 20px;
-  color:rgb(116, 114, 114);
+  color:rgb(0, 0, 0);
   border : none; /*입력칸 틀없앰*/
   border-bottom: 2px solid rgb(116, 114, 114);
 }
@@ -68,13 +68,18 @@ ul{
 /* 비밀번호 입력창 */
 #login_Password{
   width: 100%;
-  padding: 10px 20px;
+  padding: 10px 15px;
   margin: 20px auto;
   font-weight: 700;
   font-size : 20px;
-  color:rgb(116, 114, 114);
+  color:rgb(0, 0, 0);
   border : none;
   border-bottom: 2px solid rgb(116, 114, 114);
+}
+
+#login_Id::placeholder,
+#login_Password::placeholder {
+  color: rgb(133, 133, 133);
 }
 
 #login_Id:focus,
@@ -187,20 +192,33 @@ input[type="checkbox"] {
 
 /*다른방법으로 로그인*/
 .bodybottom{
-  width: 660px;
+  width: 500px;
   /* border : 1px solid black; */
   display : block;
-  margin : auto;   
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 #anotherlogin{
-  padding : 100px 0px 10px;
+  width: 500px;
+  padding : 0px 0px 10px;
   color:rgb(116, 114, 114);
   text-align : center; /*글씨 가운데 정렬*/
   justify-content: space-between;
   display: flex;
 }
-.line{width: 30%;}
-.small{height: 50%;
+#anotherLoginText{
+  width: 40%;
+}
+#anotherLoginText > p{
+  width: 100%;
+}
+.line {
+  width: 20%;
+}
+.small {
+  height: 50%;
   border-bottom: 1px solid rgb(116, 114, 114);
 }
 /*sns로그인 아이콘*/
@@ -208,10 +226,11 @@ input[type="checkbox"] {
   height : 130px;
 }
 #snsbox {
+  display: flex;
   text-align: center;
+  flex-wrap: nowrap;
 }
 #snsbox img{
-  width : 125px;
-  height : auto;
-  padding : 15px 25px;
+  width : 75px;
+  margin : 15px 25px;
 }   
