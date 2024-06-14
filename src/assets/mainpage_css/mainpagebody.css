@@ -8,6 +8,16 @@
   margin-top: 15px;
   box-sizing: border-box;
   z-index: 5;
+  animation: main 1800ms cubic-bezier(0.010, 0.570, 0.490, 1.150) forwards;
+}
+
+@keyframes main {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 
 /* 메인 영역 - 캐러셀 */
