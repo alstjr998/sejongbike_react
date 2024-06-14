@@ -1,5 +1,6 @@
 import EoulingInfo from "./EoulingInfo";
 import MainPage from "./MainPage";
+import ServiceInfo from "./ServiceInfo";
 import {
   BrowserRouter as Router,
   Routes,
@@ -13,6 +14,7 @@ const Outlet = () => {
       <Routes>
         <Route index element={<MainPage />} />
         <Route path="/eoulinginfo" element={<EoulingInfo />} />
+        <Route path="/serviceinfo" element={<ServiceInfo />} />
         <Route path="/login" element={<Login />} />
         
       </Routes>
