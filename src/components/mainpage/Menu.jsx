@@ -20,7 +20,7 @@ const Menu = () => {
         <ul>
           <li id="li_menu1">
             <div className="textBox">
-              <a href="https://www.sejongbike.kr/eouling/introduce">어울링이란</a>
+              <Link to="/eoulinginfo">어울링이란</Link>
             </div>
             <ul id="ul_menu1">
               <li><Link to="/eoulinginfo">어울링소개</Link></li>
