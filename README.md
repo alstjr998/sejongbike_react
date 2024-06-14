@@ -22,3 +22,11 @@
 
 4. 회원 정보 및 공지사항 게시판을 연결하는 데이터베이스 Back-end API 연결 작업 중
 
+
+
+
+
+참고 사이트
+
+1. CSS 애니메이션 (Ease) 작성 시 참고한 애니메이션 그래프 툴 사이트 (https://matthewlein.com/tools/ceaser)
+
