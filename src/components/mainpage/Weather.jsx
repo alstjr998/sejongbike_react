@@ -18,6 +18,10 @@ const Weather = () => {
     fontSize: '13px',
     fontWeight: '700',
     color: 'rgba(0, 0, 0, 0.46)',
+    WebkitUserSelect: 'none',
+    MozUserSelect: 'none',
+    MsUserSelect: 'none',
+    UserSelect: 'none',
   };
 
   return (
