@@ -1,4 +1,5 @@
 import '../../assets/eoulinginfo_css/eoulinginfo.css'
+import '../../assets/eoulinginfo_css/eoulinginfo_responsive.css'
 
 const InfoContent = () => {
 
