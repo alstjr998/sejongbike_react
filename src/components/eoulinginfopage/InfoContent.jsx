@@ -1,10 +1,17 @@
 import '../../assets/eoulinginfo_css/eoulinginfo.css'
 
 const InfoContent = () => {
+
+  const animDelay0 = {
+    animationDelay: "0ms",
+  };
+
   return(
     <>
       <div id="pageTitle">
-        <p>어울링소개</p>
+        <div>
+          <p style={animDelay0}>어울링소개</p>
+        </div>
         <hr />
       </div>
       
