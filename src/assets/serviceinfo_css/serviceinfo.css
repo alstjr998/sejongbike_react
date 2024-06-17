@@ -1,0 +1,60 @@
+.contentTable {
+  width: 910px;
+  margin: 15px 0;
+  font-size: 17px;
+  text-align: center;
+}
+
+/* 테이블 공통 */
+.contentTable table {
+  width: 100%;
+  border-top: 3px solid;
+  border-collapse: collapse;
+}
+
+/* 이용대상 및 운영시간 & 회원 구분 테이블 */
+#userTimeTable td {
+  border-left: 1px solid #989898ca;
+  border-bottom: 1px solid #989898ca;
+  padding: 13px;
+}
+
+#userTimeTable td:first-child {
+  border-left: none;
+  font-weight: 800;
+  background-color: #aac6ff62;
+}
+
+/* 요금 안내 및 결제 방법 테이블 */
+#paymentTable th {
+  border-left: none;
+  font-weight: 800;
+  background-color: #aac6ff62;
+}
+
+#paymentTable th,
+#paymentTable td {
+  border-left: 1px solid #989898ca;
+  border-bottom: 1px solid #989898ca;
+  padding: 13px;
+}
+
+#paymentTable th:first-child,
+#paymentTable > tbody > tr > td:first-child {
+  border-left: none;
+  border-right: 1px solid #989898ca;
+}
+
+/* 환불 방법 테이블 */
+#refundTable th{
+  border-left: none;
+  font-weight: 800;
+  background-color: #aac6ff62;
+}
+
+#refundTable th,
+#refundTable td {
+  border-left: 1px solid #989898ca;
+  border-bottom: 1px solid #989898ca;
+  padding: 13px;
+}
