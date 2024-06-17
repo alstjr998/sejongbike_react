@@ -135,11 +135,13 @@
 
 .imgContainer > #eoulingImg {
   width: 250px;
+  padding: 5px;
   display: block;
 }
 
 .imgContainer > #eoulingDockerImg{
   width: 150px;
+  padding: 5px;
   display: block;
 }
 
