@@ -3,34 +3,6 @@
   margin-top: 25px;
 }
 
-/* 소개페이지-서브타이틀 */
-.infoSubTitle {
-  font-size: 28px;
-  font-weight: 800;
-  padding-left: 10px;
-  border-left: 5px solid rgb(235, 87, 87);
-  overflow: hidden;
-}
-
-.infoSubTitle > p {
-  animation: infoSubTitle 1000ms cubic-bezier(0.010, 0.570, 0.490, 1.150) forwards;
-}
-
-@keyframes infoSubTitle {
-  0% {
-    transform: translateY(100%);
-    opacity: 0%;
-  }
-  20% {
-    transform: translateY(100%);
-    opacity: 0%;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 100%;
-  }
-}
-
 .context {
   margin: 15px 15px;
 }
