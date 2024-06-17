@@ -1,14 +1,6 @@
 
 const RefundTable = () => {
 
-  const width10p = {
-    width: "10%",
-  }
-
-  const width15p = {
-    width: "15%",
-  };
-
   return(
     <div className="content">
       <div className="infoSubTitle">
