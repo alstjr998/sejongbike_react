@@ -8,5 +8,33 @@
 }
 
 
+/* 공통 - 타이틀 */
+#pageTitle {
+  width: 910px;
+  font-size: 35px;
+  font-weight: 800;
+  margin-top: 25px;
+}
 
+#pageTitle > div {
+  overflow: hidden;
+}
 
+#pageTitle > div > p {
+  animation: pageTitle 800ms cubic-bezier(0.010, 0.570, 0.490, 1.150) forwards;
+}
+
+@keyframes pageTitle {
+  0% {
+    transform: translateY(100%);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 100%;
+  }
+}
+
+#pageTitle > hr {
+  margin: 10px 0 20px;
+}
