@@ -7,6 +7,7 @@ import {
   Route
 } from "react-router-dom";
 import Login from "./components/loginpage/Login";
+import DockFind from "./DockFind";
 
 const Outlet = () => {
   return(
@@ -16,6 +17,7 @@ const Outlet = () => {
         <Route path="/eoulinginfo" element={<EoulingInfo />} />
         <Route path="/serviceinfo" element={<ServiceInfo />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/dockfind" element={<DockFind />} />
         
       </Routes>
     </ Router>

@@ -32,7 +32,7 @@ const Menu = () => {
           </li>
           <li>
             <div className="textBox">
-              <a href="https://www.sejongbike.kr/stationSearch">대여소 조회</a>
+              <Link to="/dockfind">대여소 조회</Link>
             </div>
           </li>
           <li id="li_menu2">
