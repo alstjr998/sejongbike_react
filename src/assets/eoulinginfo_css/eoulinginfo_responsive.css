@@ -6,15 +6,6 @@
     margin-top: 25px;
   }
 
-  /* 소개페이지-타이틀 */
-  #pageTitle {
-    width: 90%;
-    font-size: 35px;
-    font-weight: 800;
-    margin-top: 25px;
-  }
-  
-
   /* 뉴어울링 설명 */
   .descBox {
     flex-direction: column;
