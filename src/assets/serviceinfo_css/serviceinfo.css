@@ -10,6 +10,21 @@
   width: 100%;
   border-top: 3px solid;
   border-collapse: collapse;
+  opacity: 0%;
+  transform: translateY(50%);
+  animation: table 1000ms cubic-bezier(0.010, 0.570, 0.490, 1.150) forwards;
+  animation-delay: 350ms;
+}
+
+@keyframes table {
+  0% {
+    opacity: 0%;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0%);
+  }
 }
 
 /* 이용대상 및 운영시간 & 회원 구분 테이블 */
