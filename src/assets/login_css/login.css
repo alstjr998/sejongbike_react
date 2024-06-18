@@ -39,7 +39,7 @@ body{
 
 /*로그인*/
 /* 여러 요소에 같은 스타일 적용 */
-ul{
+.login > ul{
   list-style: none;
 }
 
