@@ -73,3 +73,9 @@
   border-bottom: 1px solid #989898ca;
   padding: 13px;
 }
+
+#refundTable > thead > tr > th:first-child,
+#refundTable > tbody > tr > td:first-child {
+  border-left: none;
+  border-right: 1px solid #989898ca;
+}
