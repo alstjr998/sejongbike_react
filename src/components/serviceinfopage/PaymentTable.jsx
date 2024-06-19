@@ -5,7 +5,16 @@ const PaymentTable = () => {
       <div className="infoSubTitle">
         <p>요금 안내 및 결제 방법</p>
       </div> 
-      <div className="contentTable">
+      <div className="context" style={{marginBottom: "5px"}}>
+        <div className="listDescription">
+          <ul>
+            <li>기본 사용료는 <strong>90분</strong>을 기준으로 합니다.</li>
+            <li>기본 사용료의 사용시간 범위에서 반복 이용은 별도의 추가 사용료 없이 가능합니다.</li>
+            <li>1회 대여 중 사용 시간이 90분을 초과할 경우 시간에 따라 추가 사용료가 발생합니다.</li>
+          </ul>
+        </div>
+      </div>
+      <div className="contentTable" style={{marginTop: "5px"}}>
         <table id="paymentTable">
           <thead>
             <th>구분</th>

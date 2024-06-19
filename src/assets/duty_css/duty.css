@@ -1,0 +1,37 @@
+/* 리스트 */
+.listDescription > ul {
+  width: 98%;
+  font-size: 16px;
+  line-height: 27px;
+
+}
+
+.listDescription > ul {
+  opacity: 0%;
+  transform: translateY(40%);
+  animation: listDescription 800ms cubic-bezier(0.010, 0.570, 0.490, 1.150) forwards;
+  animation-delay: 400ms;
+}
+
+@keyframes listDescription {
+  0% {
+    transform: translateY(40%);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 100%;
+  }
+}
+
+/* 뱃지 */
+li > span {
+  color: #802c2c;
+  line-height: 1px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 13px;
+  background-color: #ffc0c0;
+  padding: 3px 3px 2px 4px;
+  border-radius: 3px;
+}

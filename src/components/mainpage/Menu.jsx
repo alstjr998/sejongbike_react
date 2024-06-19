@@ -24,8 +24,8 @@ const Menu = () => {
             </div>
             <ul id="ul_menu1">
               <li><Link to="/eoulinginfo">어울링소개</Link></li>
-              <li><a href="/serviceinfo">서비스안내</a></li>
-              <li><a href="https://www.sejongbike.kr/eouling/duty">의무와 책임</a></li>
+              <li><Link to="/serviceinfo">서비스안내</Link></li>
+              <li><Link to="/duty">의무와 책임</Link></li>
               <li><a href="https://www.sejongbike.kr/eouling/insurance">시민자전거보험</a></li>
               <li><a href="https://www.sejongbike.kr/usage/bikeUsage">자전거이용정보</a></li>
             </ul>
