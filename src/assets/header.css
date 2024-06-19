@@ -100,7 +100,7 @@ header > #menuButton {
   background-color: rgba(255, 255, 255, 0.936);
   border-radius: 5px;
   top: 92px;
-  left: 0;
+  left: -3px;
   filter: drop-shadow(0px 0px 4px #80808051);
 }
 
