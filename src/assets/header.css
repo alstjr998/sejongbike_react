@@ -99,8 +99,9 @@ header > #menuButton {
   padding: 0;
   background-color: rgba(255, 255, 255, 0.936);
   border-radius: 5px;
-  top: 89px;
+  top: 92px;
   left: 0;
+  filter: drop-shadow(0px 0px 4px #80808051);
 }
 
 #nav #ul_menu1:after,
