@@ -3,7 +3,6 @@
 @media screen and (max-width: 910px) {
   .contentTable {
     width: 100%;
-    overflow: auto;
   }
 
   @media screen and (max-width: 380px) {
