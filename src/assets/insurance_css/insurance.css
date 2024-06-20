@@ -1,0 +1,45 @@
+
+/* 첨자 */
+.description sup {
+  font-size: 13px;
+  font-weight: 800;
+  color: #f84a4a;
+  position: relative;
+}
+
+.description > ul {
+  opacity: 0%;
+  transform: translateY(40%);
+  animation: description 1300ms cubic-bezier(0.010, 0.570, 0.490, 1.150) forwards;
+}
+
+/* 기본 정보 테이블 */
+#insuranceInfoTable td {
+  border-left: 1px solid #989898ca;
+  border-bottom: 1px solid #989898ca;
+  padding: 13px;
+}
+
+#insuranceInfoTable td:first-child {
+  border-left: none;
+  font-weight: 800;
+  background-color: #aac6ff62;
+}
+
+/* 보장내용 테이블 */
+#insuranceTable th,
+#insuranceTable td {
+  border-left: 1px solid #989898ca;
+  border-bottom: 1px solid #989898ca;
+  padding: 13px;
+}
+
+#insuranceTable th {
+  font-weight: 800;
+  background-color: #aac6ff62;
+}
+
+#insuranceTable th:first-child,
+#insuranceTable td:first-child {
+  border-left: none;
+}

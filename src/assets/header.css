@@ -6,6 +6,8 @@ header {
   justify-content: center;
   background-color: rgb(117, 162, 255);
   box-shadow: 0px 0px 5px;
+  position: relative;
+  z-index: 5;
 }
 
 header > #leftBlank,

@@ -1,0 +1,18 @@
+
+/* 테이블 */
+@media screen and (max-width: 910px) {
+  .contentTable {
+    width: 100%;
+    overflow: auto;
+  }
+
+  @media screen and (max-width: 380px) {
+    .contentTable {
+      width: 380px;
+    }
+
+    .contentTable table {
+      width: 380px;
+    }
+  }
+}

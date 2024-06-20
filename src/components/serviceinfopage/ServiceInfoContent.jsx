@@ -1,4 +1,5 @@
 import '../../assets/serviceinfo_css/serviceinfo.css';
+import '../../assets/serviceinfo_css/serviceinfo_responsive.css';
 import PaymentTable from './PaymentTable';
 import RefundTable from './RefundTable';
 

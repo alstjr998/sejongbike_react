@@ -9,6 +9,7 @@ import {
 import Login from "./components/loginpage/Login";
 import DockFind from "./DockFind";
 import Duty from "./Duty";
+import Insurance from "./Insurance";
 
 const Outlet = () => {
   return(
@@ -18,6 +19,7 @@ const Outlet = () => {
         <Route path="/eoulinginfo" element={<EoulingInfo />} />
         <Route path="/serviceinfo" element={<ServiceInfo />} />
         <Route path="/duty" element={<Duty />} />
+        <Route path="/insurance" element={<Insurance />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dockfind" element={<DockFind />} />
         

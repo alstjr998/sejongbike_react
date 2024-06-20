@@ -7,6 +7,55 @@
   width: 100vw;
 }
 
+/* 공통 - 반응형 메뉴 */
+.responsiveMenu{
+  display: none;
+  flex-direction: row;
+  height: 70px;
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #acc1f4;
+  z-index: -100;
+}
+
+#responsiveMenuTitle {
+  width: 35%;
+  display: flex;
+  align-items: center;
+}
+
+#responsiveMenuTitle > p {
+  padding: 3px;
+  border-right: 3px solid #616161;
+  width: 100%;
+}
+
+#responsiveMenuDropdown {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+}
+
+#responsiveMenuDropdown > p {
+  padding: 3px;
+}
+
+#dropdownBtn {
+  position: absolute;
+  right: 40px;
+}
+
+
+@media screen and (max-width: 910px) {
+  .responsiveMenu {
+    display: flex;
+  }
+}
+
 
 /* 공통 - 타이틀 */
 #pageTitle {
