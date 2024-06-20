@@ -51,7 +51,9 @@ header > #menuButton {
   width: 530px;
   height: 100%;
   margin: 0;
-}a
+  position: relative;
+  z-index: 100;
+}
 
 .menu.active {
   display: none;

@@ -84,7 +84,6 @@
   }
 }
 
-
 .dropdown{
   display: none;
 }
@@ -99,7 +98,7 @@
   position: absolute;
   bottom: -395px;
   background-color: #acc1f4;
-  z-index: 10;
+  z-index: 1;
   box-shadow: 0px 3px 10px #8c8c8c70;
 }
 
@@ -108,11 +107,14 @@
 }
 
 #dropdownMenuList > ul > li {
-  padding: 20px;
+  height: 65.5px;
   border-top: 1.5px solid #ffffff;
+  display: flex;
+  align-items: center;
 }
 
 #dropdownMenuList > ul a {
+  width: 100%;
   color: #292929;
   font-weight: 700;
   text-decoration: none;
