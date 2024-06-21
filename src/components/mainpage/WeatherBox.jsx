@@ -44,8 +44,6 @@ const WeatherBox = () => {
         icon: weatherIconAddress,
       });
 
-      console.log(res.data);
-
     } catch (err) {
       console.error(err);
     }
