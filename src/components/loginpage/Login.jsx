@@ -1,7 +1,67 @@
+import { useEffect } from 'react';
 import '../../assets/login_css/login.css';
 import { Link } from 'react-router-dom';
 
+const BACK_END_URL = import.meta.env.MODE === 'development'
+  ? 'http://localhost:8080'
+  : 'https://port-0-spring-boot-demo-lxl86ulic4678e61.sel5.cloudtype.app';
+
 const Login = () => {
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const token = params.get("token");
+
+    if (token) {
+      localStorage.setItem("accessToken", token);
+      onLogin(); // Login 상태 업데이트
+      navigate("/", { replace: true }); // 메인 페이지로 리디렉션
+    }
+  }, [location, navigate, onLogin]);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+
+    try {
+      const response = await fetch(`${BACK_END_URL}/token`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        const authHeader = response.headers.get("Authorization");
+        if (authHeader && authHeader.startsWith("Bearer ")) {
+          const jwtToken = authHeader.replace("Bearer ", "");
+          localStorage.setItem("accessToken", jwtToken);
+          onLogin(); // Login 상태 업데이트
+          navigate(from, { replace: true });
+        } else {
+          setError("Authorization 헤더가 없거나 형식이 잘못되었습니다.");
+        }
+      } else {
+        setError("로그인 실패: 아이디나 비밀번호를 확인하세요.");
+      }
+    } catch (error) {
+      setError("로그인 실패: 서버 오류가 발생했습니다.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleGithubLogin = () => {
+    window.location.href = `${BACK_END_URL}/oauth2/authorization/github`;
+  };
+
   return (
     <div className="container">
       <div className="logopart">
