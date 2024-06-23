@@ -20,9 +20,10 @@ const Outlet = () => {
         <Route path="/serviceinfo" element={<ServiceInfo />} />
         <Route path="/duty" element={<Duty />} />
         <Route path="/insurance" element={<Insurance />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/dockfind" element={<DockFind />} />
         
+        <Route path="/login" element={<Login />} />
+        
+        <Route path="/dockfind" element={<DockFind />} />
       </Routes>
     </Router>
   );

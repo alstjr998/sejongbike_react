@@ -1,12 +1,19 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import '../../assets/login_css/login.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const BACK_END_URL = import.meta.env.MODE === 'development'
   ? 'http://localhost:8080'
   : 'https://port-0-spring-boot-demo-lxl86ulic4678e61.sel5.cloudtype.app';
 
-const Login = () => {
+const Login = ({ onLogin }) => {
+
+  const [formData, setFormData] = useState({ username: "", password: "" });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -58,10 +65,6 @@ const Login = () => {
     }
   };
 
-  const handleGithubLogin = () => {
-    window.location.href = `${BACK_END_URL}/oauth2/authorization/github`;
-  };
-
   return (
     <div className="container">
       <div className="logopart">
@@ -75,12 +78,26 @@ const Login = () => {
         <div className="login">
           <ul>
             <li>
-              <input type="text" id="login_Id" placeholder="아이디" />
+              <input
+                type="text"
+                id="username"
+                placeholder="아이디"
+                value={formData.username}
+                onChange={handleChange}
+                required
+              />
             </li>
           </ul>
           <ul>
             <li>
-              <input type="password" id="login_Password" placeholder="비밀번호" />
+              <input
+                type="password"
+                id="password"
+                placeholder="비밀번호"
+                value={formData.password}
+                onChange={handleChange}
+                required
+              />
             </li>
           </ul>
           <ul>
@@ -91,7 +108,9 @@ const Login = () => {
               </label>
             </li>
           </ul>
-          <button type="submit" onClick={() => window.location.href='/'}>로그인</button>
+          <button type="submit" disabled={loading}>
+            {loading ? "로그인 중..." : "로그인"}
+          </button>
         </div>
 
         <div className="infojoinbox">
