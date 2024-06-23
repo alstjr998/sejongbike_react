@@ -75,43 +75,33 @@ const Login = ({ onLogin }) => {
       </div>
 
       <div id="content">
-        <div className="login">
-          <ul>
-            <li>
-              <input
-                type="text"
-                id="username"
-                placeholder="아이디"
-                value={formData.username}
-                onChange={handleChange}
-                required
-              />
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <input
-                type="password"
-                id="password"
-                placeholder="비밀번호"
-                value={formData.password}
-                onChange={handleChange}
-                required
-              />
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <input type="checkbox" id="check_btn" />
-              <label htmlFor="check_btn">
-                <span>로그인 상태유지</span>
-              </label>
-            </li>
-          </ul>
+        <form className="login">
+          <input
+            type="text"
+            id="login_Id"
+            name="username"
+            placeholder="아이디"
+            value={formData.username}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="password"
+            id="login_Password"
+            name="password"
+            placeholder="비밀번호"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
+          <input type="checkbox" id="check_btn" />
+          <label htmlFor="check_btn">
+            <span>로그인 상태 유지</span>
+          </label>
           <button type="submit" disabled={loading}>
             {loading ? "로그인 중..." : "로그인"}
           </button>
-        </div>
+        </form>
 
         <div className="infojoinbox">
           <div id="User_Info">

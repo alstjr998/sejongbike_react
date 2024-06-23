@@ -12,6 +12,28 @@ import Duty from "./Duty";
 import Insurance from "./Insurance";
 
 const Outlet = () => {
+
+  const [isAuth, setIsAuth] = useState(isAuthenticated());
+
+  useEffect(() => {
+    const handleAuthChange = () => {
+      setIsAuth(isAuthenticated());
+    };
+
+    window.addEventListener("storage", handleAuthChange);
+    return () => {
+      window.removeEventListener("storage", handleAuthChange);
+    };
+  }, []);
+
+  const handleLogin = () => {
+    setIsAuth(true);
+  };
+
+  const handleLogout = () => {
+    setIsAuth(false);
+  };
+
   return(
     <Router>
       <Routes>
@@ -21,7 +43,7 @@ const Outlet = () => {
         <Route path="/duty" element={<Duty />} />
         <Route path="/insurance" element={<Insurance />} />
         
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login onLogin={handleLogin}/>} />
         
         <Route path="/dockfind" element={<DockFind />} />
       </Routes>
