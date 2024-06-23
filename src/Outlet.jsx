@@ -4,12 +4,46 @@ import ServiceInfo from "./ServiceInfo";
 import {
   BrowserRouter as Router,
   Routes,
-  Route
+  Route,
+  Navigate,
+  useLocation
 } from "react-router-dom";
 import Login from "./components/loginpage/Login";
 import DockFind from "./DockFind";
 import Duty from "./Duty";
 import Insurance from "./Insurance";
+import { useEffect, useState } from "react";
+
+const isAuthenticated = () => {
+  const token = localStorage.getItem("accessToken");
+  return !!token;
+};
+
+const PrivateRoute = ({ element: Element, ...rest }) => {
+  const [isAuth, setIsAuth] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    const checkAuth = () => {
+      const authenticated = isAuthenticated();
+      setIsAuth(authenticated);
+      setIsLoading(false);
+    };
+
+    checkAuth();
+  }, []);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+  return isAuth ? (
+    <Element {...rest} />
+  ) : (
+    <Navigate to="/login" replace state={{ from: location }} />
+  );
+};
+
 
 const Outlet = () => {
 
@@ -43,9 +77,10 @@ const Outlet = () => {
         <Route path="/duty" element={<Duty />} />
         <Route path="/insurance" element={<Insurance />} />
         
-        <Route path="/login" element={<Login onLogin={handleLogin}/>} />
-        
         <Route path="/dockfind" element={<DockFind />} />
+
+        <Route path="/login" element={<Login onLogin={handleLogin}/>} />
+        <Route path="/mypage" element={<PrivateRoute element={<MyPage />} />} />
       </Routes>
     </Router>
   );
