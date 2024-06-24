@@ -72,7 +72,7 @@ const Outlet = () => {
   return (
     <>
       <Router>
-        <Header />
+        <Header isAuth={isAuth}/>
         <Routes>
           <Route index element={<MainPage />} />
           <Route path="/eoulinginfo" element={<EoulingInfo />} />
