@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Logout from "./loginpage/Logout";
 
 const Menu = (props) => {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -67,7 +68,7 @@ const Menu = (props) => {
           {props.isAuth ? (
             <li id="logout">
               <div className="textBox">
-                <Link to="/" onClick={props.onLogout}>로그아웃</Link>
+                <Logout onLogout={props.onLogout} />
               </div>
             </li>
           ) : (

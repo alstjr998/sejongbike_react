@@ -16,6 +16,7 @@ import Insurance from "./Insurance";
 import MyPage from "./MyPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Logout from "./components/loginpage/Logout";
 
 const isAuthenticated = () => {
   const token = localStorage.getItem("accessToken");
@@ -83,10 +84,8 @@ const Outlet = () => {
           <Route path="/dockfind" element={<DockFind />} />
 
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
-          <Route
-            path="/mypage"
-            element={<PrivateRoute element={<MyPage />} />}
-          />
+          <Route path="/logout" element={<Logout />} />
+          <Route path="/mypage" element={<PrivateRoute element={<MyPage />} />} />
         </Routes>
       </Router>
       <Footer />
