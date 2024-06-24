@@ -65,9 +65,11 @@ const InsuranceContent = () => {
         <div className="contentTable" style={{marginBottom: "5px"}}>
           <table id="insuranceTable">
             <thead>
-              <th style={{width: "20%"}}>구분</th>
-              <th style={{width: "48%"}}>보장내용</th>
-              <th>보장금액</th>
+              <tr>
+                <th style={{width: "20%"}}>구분</th>
+                <th style={{width: "48%"}}>보장내용</th>
+                <th>보장금액</th>
+              </tr>
             </thead>
             <tbody>
               <tr>

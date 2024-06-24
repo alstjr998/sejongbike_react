@@ -17,9 +17,11 @@ const PaymentTable = () => {
       <div className="contentTable" style={{marginTop: "5px"}}>
         <table id="paymentTable">
           <thead>
-            <th>구분</th>
-            <th colSpan={2}>정회원</th>
-            <th>준회원</th>
+            <tr>
+              <th>구분</th>
+              <th colSpan={2}>정회원</th>
+              <th>준회원</th>
+            </tr>
           </thead>
           <tbody>
             <tr>
