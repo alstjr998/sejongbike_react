@@ -3,7 +3,7 @@ import '../assets/header.css';
 import '../assets/header_responsive.css'
 import Menu from './Menu';
 
-const Header = (isAuth) => {
+const Header = (props) => {
   return(
     <header>
       <div id="leftBlank"></div>
@@ -13,7 +13,7 @@ const Header = (isAuth) => {
           <p>어울링</p>
         </Link>
       </div>
-      <Menu isAuth={isAuth}/>
+      <Menu isAuth={props.isAuth} onLogout={props.onLogout} />
     </header>
   );
 };

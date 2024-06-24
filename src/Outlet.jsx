@@ -72,7 +72,7 @@ const Outlet = () => {
   return (
     <>
       <Router>
-        <Header isAuth={isAuth}/>
+        <Header isAuth={isAuth} onLogout={handleLogout}/>
         <Routes>
           <Route index element={<MainPage />} />
           <Route path="/eoulinginfo" element={<EoulingInfo />} />

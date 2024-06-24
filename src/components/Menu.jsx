@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Menu = (isAuth) => {
+const Menu = (props) => {
   const [menuVisible, setMenuVisible] = useState(false);
 
   const menuToggle = () => {
@@ -64,10 +64,10 @@ const Menu = (isAuth) => {
               </li>
             </ul>
           </li>
-          {isAuth ? (
-            <li id="login">
+          {props.isAuth ? (
+            <li id="logout">
               <div className="textBox">
-                <Link to="/login">로그아웃</Link>
+                <Link to="/" onClick={props.onLogout}>로그아웃</Link>
               </div>
             </li>
           ) : (
