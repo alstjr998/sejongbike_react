@@ -1,6 +1,4 @@
 import DropdownMenuEouling from "./components/DropdownMenuEouling";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
 import DutyContent from "./components/dutypage/DutyContent";
 
 const Duty = () => {
@@ -9,10 +7,8 @@ const Duty = () => {
 
   return(
     <>
-      <Header />
       <DropdownMenuEouling pageName={pageName} />
       <DutyContent />
-      <Footer />
     </>
   );
 };

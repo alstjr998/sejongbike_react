@@ -1,6 +1,4 @@
 import DropdownMenuEouling from "./components/DropdownMenuEouling";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
 import InfoContent from "./components/eoulinginfopage/InfoContent";
 
 const EoulingInfo = () => {
@@ -9,10 +7,8 @@ const EoulingInfo = () => {
 
   return(
     <>
-      <Header />
       <DropdownMenuEouling pageName={pageName} />
       <InfoContent />
-      <Footer />
     </>
   );
 };

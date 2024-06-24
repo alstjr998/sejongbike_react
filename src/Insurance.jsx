@@ -1,6 +1,4 @@
 import DropdownMenuEouling from "./components/DropdownMenuEouling";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
 import InsuranceContent from "./components/insurancepage/InsuranceContent";
 
 const Insurance = () => {
@@ -9,10 +7,8 @@ const Insurance = () => {
 
   return(
     <>
-      <Header />
       <DropdownMenuEouling pageName={pageName} />
       <InsuranceContent />
-      <Footer />
     </>
   );
 };

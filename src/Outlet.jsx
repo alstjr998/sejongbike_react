@@ -1,18 +1,21 @@
-import EoulingInfo from "./EoulingInfo";
-import MainPage from "./MainPage";
-import ServiceInfo from "./ServiceInfo";
+import { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Navigate,
-  useLocation
+  useLocation,
 } from "react-router-dom";
+import EoulingInfo from "./EoulingInfo";
+import MainPage from "./MainPage";
+import ServiceInfo from "./ServiceInfo";
 import Login from "./components/loginpage/Login";
 import DockFind from "./DockFind";
 import Duty from "./Duty";
 import Insurance from "./Insurance";
-import { useEffect, useState } from "react";
+import MyPage from "./MyPage";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const isAuthenticated = () => {
   const token = localStorage.getItem("accessToken");
@@ -44,9 +47,7 @@ const PrivateRoute = ({ element: Element, ...rest }) => {
   );
 };
 
-
 const Outlet = () => {
-
   const [isAuth, setIsAuth] = useState(isAuthenticated());
 
   useEffect(() => {
@@ -68,21 +69,28 @@ const Outlet = () => {
     setIsAuth(false);
   };
 
-  return(
-    <Router>
-      <Routes>
-        <Route index element={<MainPage />} />
-        <Route path="/eoulinginfo" element={<EoulingInfo />} />
-        <Route path="/serviceinfo" element={<ServiceInfo />} />
-        <Route path="/duty" element={<Duty />} />
-        <Route path="/insurance" element={<Insurance />} />
-        
-        <Route path="/dockfind" element={<DockFind />} />
+  return (
+    <>
+      <Router>
+        <Header />
+        <Routes>
+          <Route index element={<MainPage />} />
+          <Route path="/eoulinginfo" element={<EoulingInfo />} />
+          <Route path="/serviceinfo" element={<ServiceInfo />} />
+          <Route path="/duty" element={<Duty />} />
+          <Route path="/insurance" element={<Insurance />} />
 
-        <Route path="/login" element={<Login onLogin={handleLogin}/>} />
-        <Route path="/mypage" element={<PrivateRoute element={<MyPage />} />} />
-      </Routes>
-    </Router>
+          <Route path="/dockfind" element={<DockFind />} />
+
+          <Route path="/login" element={<Login onLogin={handleLogin} />} />
+          <Route
+            path="/mypage"
+            element={<PrivateRoute element={<MyPage />} />}
+          />
+        </Routes>
+      </Router>
+      <Footer />
+    </>
   );
 };
 

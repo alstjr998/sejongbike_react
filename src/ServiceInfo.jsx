@@ -1,5 +1,3 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import ServiceInfoContent from "./components/serviceinfopage/ServiceInfoContent";
 import DropdownMenuEouling from "./components/DropdownMenuEouling";
 
@@ -9,10 +7,8 @@ const ServiceInfo = () => {
 
   return(
     <>
-      <Header />
       <DropdownMenuEouling pageName={pageName}/>
       <ServiceInfoContent />
-      <Footer />
     </>
   );
 };
