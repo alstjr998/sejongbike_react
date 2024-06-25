@@ -1,26 +1,20 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import Logout from "./loginpage/Logout";
 
 const Menu = (props) => {
-  const [menuVisible, setMenuVisible] = useState(false);
-
-  const menuToggle = () => {
-    setMenuVisible(!menuVisible);
-  };
 
   return (
     <>
-      <div id="menuButton" onClick={menuToggle}>
+      <div id="menuButton" onClick={props.menuToggle}>
         <a href="#" className="toggleButton">
           <img src="/img/menuButton.png" alt="menu button" />
         </a>
       </div>
-      <nav id="nav" className={menuVisible ? "menu active" : "menu"}>
+      <nav id="nav" className={props.menuVisible ? "menu active" : "menu"}>
         <ul>
           <li id="li_menu1">
             <div className="textBox">
-              <Link to="/eoulinginfo" onClick={menuToggle}>어울링이란</Link>
+              <Link to="/eoulinginfo" onClick={props.menuToggle}>어울링이란</Link>
             </div>
             <ul id="ul_menu1">
               <li>
@@ -47,12 +41,12 @@ const Menu = (props) => {
           </li>
           <li>
             <div className="textBox">
-              <Link to="/dockfind">대여소 조회</Link>
+              <Link to="/dockfind" onClick={props.menuToggle}>대여소 조회</Link>
             </div>
           </li>
           <li id="li_menu2">
             <div className="textBox">
-              <a href="https://www.sejongbike.kr/customer/notice">고객센터</a>
+              <a href="https://www.sejongbike.kr/customer/notice" onClick={props.menuToggle}>고객센터</a>
             </div>
             <ul id="ul_menu2">
               <li>
@@ -68,13 +62,13 @@ const Menu = (props) => {
           {props.isAuth ? (
             <li id="logout">
               <div className="textBox">
-                <Logout onLogout={props.onLogout} />
+                <Logout onLogout={props.onLogout}  onClick={props.menuToggle}/>
               </div>
             </li>
           ) : (
             <li id="login">
               <div className="textBox">
-                <Link to="/login">로그인</Link>
+                <Link to="/login" onClick={props.menuToggle}>로그인</Link>
               </div>
             </li>
           )}
