@@ -4,7 +4,7 @@ import Logout from "./loginpage/Logout";
 
 const Menu = (props) => {
 
-  const [isActive, setIsActive] = useState(true);
+  const [isActive, setIsActive] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -13,11 +13,6 @@ const Menu = (props) => {
     };
 
     window.addEventListener('resize', handleResize);
-
-    // 초기 체크
-    if (window.innerWidth <= 1000) {
-      setIsActive(false);
-    }
 
     return () => {
       window.removeEventListener('resize', handleResize);
