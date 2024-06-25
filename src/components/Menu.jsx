@@ -20,7 +20,7 @@ const Menu = (props) => {
         <ul>
           <li id="li_menu1">
             <div className="textBox">
-              <Link to="/eoulinginfo">어울링이란</Link>
+              <Link to="/eoulinginfo" onClick={menuToggle}>어울링이란</Link>
             </div>
             <ul id="ul_menu1">
               <li>
