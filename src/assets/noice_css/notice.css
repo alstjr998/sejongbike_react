@@ -1,0 +1,37 @@
+/* 공지사항 테이블 */
+#noticeTable th {
+  border-left: 1px solid #989898ca;
+  border-bottom: 1px solid #989898ca;
+  padding: 13px;
+  font-weight: 800;
+  background-color: #aac6ff62;
+}
+
+#noticeTable td {
+  border-left: 1px solid #989898ca;
+  border-bottom: 1px solid #989898ca;
+  padding: 13px;
+}
+
+#noticeTable th:first-child,
+#noticeTable td:first-child {
+  border-left: none;
+}
+
+/* 테이블 이동 버튼 */
+.noticeNumBtn {
+  width: 30px;
+  height: 30px;
+  font-size: 17px;
+  margin: 3px;
+  background-color: #ffffff;
+  border: .5px solid #45454595;
+  border-radius: 7px;
+  color: #636363c0;
+}
+
+.noticeNumBtn:disabled {
+  background-color: rgb(117, 162, 255);;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #000000;
+}

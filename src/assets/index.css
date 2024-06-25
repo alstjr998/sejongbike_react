@@ -173,7 +173,7 @@
   }
 }
 
-/* 공통-서브타이틀 */
+/* 공통 - 서브타이틀 */
 .infoSubTitle {
   font-size: 27px;
   font-weight: 800;
@@ -199,4 +199,9 @@
     transform: translateY(0%);
     opacity: 100%;
   }
+}
+
+/* 공통 - 페이지 이동 버튼 */
+.pageBtn {
+  margin: 10px;
 }

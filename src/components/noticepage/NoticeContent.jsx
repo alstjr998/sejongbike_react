@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import '../../assets/noice_css/notice.css';
 
 const NoticeContent = (props) => {
 
@@ -29,6 +30,19 @@ const NoticeContent = (props) => {
       setError("공지사항을 불러오는 데 실패했습니다.")
     }
   };
+  
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const totalPages = Math.ceil(noticeList.length / itemsPerPage);
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = noticeList.slice().reverse().slice(indexOfFirstItem, indexOfLastItem);
+
 
   return (
     <>
@@ -41,7 +55,7 @@ const NoticeContent = (props) => {
 
       <div className="content">
         <div className="contentTable" style={{marginBottom: "5px"}}>
-          <table id="insuranceTable">
+          <table id="noticeTable">
             <thead>
               <tr>
                 <th style={{width: "10%"}}>번호</th>
@@ -50,7 +64,7 @@ const NoticeContent = (props) => {
               </tr>
             </thead>
             <tbody>
-              {noticeList.slice().reverse().map((notice, index) => (
+              {currentItems.map((notice, index) => (
                 <tr key={index}>
                   <td>{notice.id}</td>
                   <td>{notice.title}</td>
@@ -59,6 +73,17 @@ const NoticeContent = (props) => {
               ))}
             </tbody>
           </table>
+          <div className="pageBtn">
+            {Array.from({ length: totalPages }, (_, index) => (
+              <button className="noticeNumBtn"
+                key={index + 1}
+                onClick={() => handlePageChange(index + 1)}
+                disabled={currentPage === index + 1}
+              >
+                <p>{index + 1}</p>
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </>
