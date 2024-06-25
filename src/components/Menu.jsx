@@ -1,7 +1,36 @@
 import { Link } from "react-router-dom";
 import Logout from "./loginpage/Logout";
+import { useEffect, useState } from "react";
 
 const Menu = (props) => {
+
+  const [isActive, setIsActive] = useState(true);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // 초기 체크
+    if (window.innerWidth <= 1000) {
+      setIsActive(false);
+    }
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (windowWidth <= 1000) {
+      setIsActive(false);
+    } else {
+      setIsActive(true);
+    }
+  }, [windowWidth]);
 
   return (
     <>
@@ -10,7 +39,7 @@ const Menu = (props) => {
           <img src="/img/menuButton.png" alt="menu button" />
         </a>
       </div>
-      <nav id="nav" className={props.menuVisible ? "menu active" : "menu"}>
+      <nav id="nav" className={props.menuVisible || isActive ? "menu active" : "menu"}>
         <ul>
           <li id="li_menu1">
             <div className="textBox">
