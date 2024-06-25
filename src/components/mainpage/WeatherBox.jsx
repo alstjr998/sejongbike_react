@@ -22,9 +22,10 @@ const WeatherBox = () => {
 
   const getWeather = async(lat, lon) => {
     try {
-      const res = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
-      );
+      const res = await axios({
+        method: "get",
+        url: `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`,
+      });
 
       const weatherId = res.data.weather[0].id;
       const weatherKo = weatherDescKo[weatherId];
