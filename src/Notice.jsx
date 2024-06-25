@@ -1,10 +1,11 @@
+import NoticeContent from "./components/noticepage/NoticeContent";
 
-const Notice = () => {
+const Notice = (props) => {
   return(
     <>
-    
+      <NoticeContent backendUrl={props.backendUrl}/>
     </>
   );
 };
 
-export default Notice;
+export default Notice; 

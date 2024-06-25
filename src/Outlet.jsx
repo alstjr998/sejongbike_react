@@ -88,7 +88,7 @@ const Outlet = () => {
 
           <Route path="/dockfind" element={<DockFind />} />
 
-          <Route path="/notice" element={<Notice />} />
+          <Route path="/notice" element={<Notice backendUrl={BACK_END_BASE_URL} />} />
 
           <Route path="/login" element={<Login onLogin={handleLogin} backendUrl={BACK_END_BASE_URL} />} />
           <Route path="/logout" element={<Logout />} />
