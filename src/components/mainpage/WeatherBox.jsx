@@ -22,21 +22,21 @@ const WeatherBox = () => {
 
   const getWeather = async(lat, lon) => {
     try {
-      const res = await axios({
+      const response = await axios({
         method: "get",
         url: `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`,
       });
 
-      const weatherId = res.data.weather[0].id;
+      const weatherId = response.data.weather[0].id;
       const weatherKo = weatherDescKo[weatherId];
 
       //날씨 아이콘 가져오기
-      const weatherIcon = res.data.weather[0].icon;
+      const weatherIcon = response.data.weather[0].icon;
       setWeatherIconAddress(`/img/${weatherIcon}.svg`);
 
-      const cityName = res.data.name;
+      const cityName = response.data.name;
 
-      const temp = Math.round(res.data.main.temp);
+      const temp = Math.round(response.data.main.temp);
  
       setWeather({
         description: weatherKo,

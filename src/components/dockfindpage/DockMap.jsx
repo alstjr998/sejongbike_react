@@ -27,9 +27,10 @@ const DockMap = () => {
   const fetchDock = async () => {
     setLoading(true);
     try{
-      const response =  await axios.get(
-        `https://api.odcloud.kr/api/15091421/v1/uddi:8f04ee4a-dc5d-47ec-b421-f8c72d2f12ad?page=1&perPage=614&serviceKey=${dockApiKey}`
-      );
+      const response =  await axios({
+        method: "get",
+        url: `https://api.odcloud.kr/api/15091421/v1/uddi:8f04ee4a-dc5d-47ec-b421-f8c72d2f12ad?page=1&perPage=614&serviceKey=${dockApiKey}`,
+      });
 
       const docks = response.data.data.map((item) => ({
         dockLat: item['경도'],
@@ -49,7 +50,11 @@ const DockMap = () => {
 
   //상태가 업데이트 된 후 지도 렌더
   if (lat === null || lon === null) {
-    return <div>Loading...</div>;
+    return(
+      <div style={{width: "95vw", height: "700px", marginTop: "15px"}}>
+        Loading...
+      </div>
+    );
   }
 
   return(
