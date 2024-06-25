@@ -17,6 +17,7 @@ import MyPage from "./MyPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Logout from "./components/loginpage/Logout";
+import Notice from "./Notice";
 
 const isAuthenticated = () => {
   const token = localStorage.getItem("accessToken");
@@ -82,6 +83,8 @@ const Outlet = () => {
           <Route path="/insurance" element={<Insurance />} />
 
           <Route path="/dockfind" element={<DockFind />} />
+
+          <Route path="/notice" element={<Notice />} />
 
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           <Route path="/logout" element={<Logout />} />

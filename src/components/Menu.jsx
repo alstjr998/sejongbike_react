@@ -75,11 +75,11 @@ const Menu = (props) => {
           </li>
           <li id="li_menu2">
             <div className="textBox">
-              <a href="https://www.sejongbike.kr/customer/notice" onClick={props.menuToggle}>고객센터</a>
+              <Link to="/notice" onClick={props.menuToggle}>고객센터</Link>
             </div>
             <ul id="ul_menu2">
               <li>
-                <a href="https://www.sejongbike.kr/customer/notice">공지사항</a>
+                <Link to="/notice">공지사항</Link>
               </li>
               <li>
                 <a href="https://www.sejongbike.kr/customer/faq">
