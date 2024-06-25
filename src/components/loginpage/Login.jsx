@@ -2,11 +2,7 @@ import { useEffect, useState } from 'react';
 import '../../assets/login_css/login.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-const BACK_END_BASE_URL = import.meta.env.MODE === 'development'
-? 'http://localhost:8080'
-: 'https://port-0-spring-boot-demo-lxl86ulic4678e61.sel5.cloudtype.app';
-
-const Login = ({ onLogin }) => {
+const Login = (props) => {
 
   const [formData, setFormData] = useState({ username: "", password: "" });
   const [loading, setLoading] = useState(false);
@@ -21,10 +17,10 @@ const Login = ({ onLogin }) => {
 
     if (token) {
       localStorage.setItem("accessToken", token);
-      onLogin(); // Login 상태 업데이트
+      props.onLogin(); // Login 상태 업데이트
       navigate("/", { replace: true }); // 메인 페이지로 리디렉션
     }
-  }, [location, navigate, onLogin]);
+  }, [location, navigate, props.onLogin]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -37,7 +33,7 @@ const Login = ({ onLogin }) => {
     setError("");
 
     try {
-      const response = await fetch(`${BACK_END_BASE_URL}/login`, {
+      const response = await fetch(`${props.backendUrl}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -52,7 +48,7 @@ const Login = ({ onLogin }) => {
         if (authHeader && authHeader.startsWith("Bearer ")) {
           const jwtToken = authHeader.replace("Bearer ", "");
           localStorage.setItem("accessToken", jwtToken);
-          onLogin(); // Login 상태 업데이트
+          props.onLogin(); // Login 상태 업데이트
           navigate(from, { replace: true });
         } else {
           setError("Authorization 헤더가 없거나 형식이 잘못되었습니다.");

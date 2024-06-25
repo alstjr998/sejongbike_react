@@ -19,6 +19,10 @@ import Footer from "./components/Footer";
 import Logout from "./components/loginpage/Logout";
 import Notice from "./Notice";
 
+const BACK_END_BASE_URL = import.meta.env.MODE === 'development'
+? 'http://localhost:8080'
+: 'https://port-0-spring-boot-demo-lxl86ulic4678e61.sel5.cloudtype.app';
+
 const isAuthenticated = () => {
   const token = localStorage.getItem("accessToken");
   return !!token;
@@ -86,7 +90,7 @@ const Outlet = () => {
 
           <Route path="/notice" element={<Notice />} />
 
-          <Route path="/login" element={<Login onLogin={handleLogin} />} />
+          <Route path="/login" element={<Login onLogin={handleLogin} backendUrl={BACK_END_BASE_URL} />} />
           <Route path="/logout" element={<Logout />} />
           <Route path="/mypage" element={<PrivateRoute element={<MyPage />} />} />
         </Routes>
