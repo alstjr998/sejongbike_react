@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react';
 import '../../assets/login_css/login.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-const BACK_END_URL = 'http://localhost:8080';
+const BACK_END_BASE_URL = import.meta.env.MODE === 'development'
+? 'http://localhost:8080'
+: 'https://port-0-spring-boot-demo-lxl86ulic4678e61.sel5.cloudtype.app';
 
 const Login = ({ onLogin }) => {
 
@@ -35,7 +37,7 @@ const Login = ({ onLogin }) => {
     setError("");
 
     try {
-      const response = await fetch(`${BACK_END_URL}/login`, {
+      const response = await fetch(`${BACK_END_BASE_URL}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
