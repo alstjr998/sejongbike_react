@@ -53,7 +53,7 @@ const DockMap = () => {
   }
 
   return(
-    <Mapdiv style={{width: "100%", height: "700px", marginTop: "15px"}}>
+    <Mapdiv style={{width: "95vw", height: "700px", marginTop: "15px"}}>
       <NaverMap defaultCenter={new navermaps.LatLng(lat, lon)} defaultZoom={17}>
         {dock.length === 0 ? (
           <p>API 조회 불가</p>
