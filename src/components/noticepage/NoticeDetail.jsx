@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import ReactHtmlParser from 'react-html-parser';
 
@@ -7,6 +7,8 @@ const NoticeDetail = (props) => {
   const { id } = useParams();
   const [notice, setNotice] = useState(null);
   const [error, setError] = useState("");
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     getNoticeDetail();
@@ -38,6 +40,11 @@ const NoticeDetail = (props) => {
 
   if (!notice) {
     return <p>Loading...</p>;
+  }
+
+
+  const gotoList = () => {
+    navigate('/notice')
   }
 
   return (
@@ -75,6 +82,10 @@ const NoticeDetail = (props) => {
           </div>
         </div>
         <hr />
+
+        <div id="noticeFooter">
+          <button id="noticeListBtn" onClick={gotoList}>목록</button>
+        </div>
       </div>
     </>
   );

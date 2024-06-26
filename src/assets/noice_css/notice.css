@@ -60,3 +60,17 @@
 #noticeDetailTable > tbody > tr:first-child > td:first-child {
   background-color: #aac6ff62;
 }
+
+#noticeFooter {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+#noticeListBtn {
+  width: 50px;
+  height: 30px;
+  background-color: #90909077;
+  border: 1px solid #b2b2b2b3;
+  border-radius: 5px;
+}
