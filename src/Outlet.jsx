@@ -81,7 +81,7 @@ const Outlet = () => {
       <Router>
         <Header isAuth={isAuth} onLogout={handleLogout}/>
         <Routes>
-          <Route index element={<MainPage />} />
+          <Route index element={<MainPage backendUrl={BACK_END_BASE_URL}/>} />
           <Route path="/eoulinginfo" element={<EoulingInfo />} />
           <Route path="/serviceinfo" element={<ServiceInfo />} />
           <Route path="/duty" element={<Duty />} />

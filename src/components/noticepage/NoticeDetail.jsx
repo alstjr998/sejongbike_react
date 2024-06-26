@@ -19,8 +19,6 @@ const NoticeDetail = (props) => {
         url: `${props.backendUrl}/notice/${id}`,
       });
 
-      console.log(response.data);
-
       const formattedData = {
         ...response.data,
         subTime: response.data.subTime.replace('T', ' '),
