@@ -37,7 +37,7 @@ const ContentBlock = (props) => {
         <input type="radio" name="board" id="question" />
         <label htmlFor="question" id="questionLabel">자주하는질문</label>
         <div id="plusButton_notice" className="plusButton">
-          <a href="https://www.sejongbike.kr/customer/notice">+더보기</a>
+          <Link to="/notice">+더보기</Link>
         </div>
         <div id="plusButton_question" className="plusButton">
           <a href="https://www.sejongbike.kr/customer/faq">+더보기</a>
