@@ -41,8 +41,6 @@ const Login = (props) => {
         body: JSON.stringify(formData),
       });
 
-      console.log(response);
-
       if (response.ok) {
         const authHeader = response.headers.get("Authorization");
         if (authHeader && authHeader.startsWith("Bearer ")) {
