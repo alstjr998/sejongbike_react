@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import '../../assets/noice_css/notice.css';
+import { Link } from "react-router-dom";
 
 const NoticeContent = (props) => {
 
@@ -67,7 +68,9 @@ const NoticeContent = (props) => {
               {currentItems.map((notice, index) => (
                 <tr key={index}>
                   <td>{notice.id}</td>
-                  <td>{notice.title}</td>
+                  <td>
+                    <Link to={`/notice/${notice.id}`}>{notice.title}</Link>
+                  </td>
                   <td>{notice.subTime}</td>
                 </tr>
               ))}

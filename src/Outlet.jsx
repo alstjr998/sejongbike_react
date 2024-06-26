@@ -18,6 +18,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Logout from "./components/loginpage/Logout";
 import Notice from "./Notice";
+import NoticeDetail from "./components/noticepage/NoticeDetail";
 
 const BACK_END_BASE_URL = import.meta.env.MODE === 'development'
 ? 'http://localhost:8080'
@@ -89,6 +90,7 @@ const Outlet = () => {
           <Route path="/dockfind" element={<DockFind />} />
 
           <Route path="/notice" element={<Notice backendUrl={BACK_END_BASE_URL} />} />
+          <Route path="/notice/:id" element={<NoticeDetail backendUrl={BACK_END_BASE_URL} />} />
 
           <Route path="/login" element={<Login onLogin={handleLogin} backendUrl={BACK_END_BASE_URL} />} />
           <Route path="/logout" element={<Logout />} />

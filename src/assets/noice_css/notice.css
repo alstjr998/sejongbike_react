@@ -18,6 +18,11 @@
   border-left: none;
 }
 
+#noticeTable > tbody > tr > td > a {
+  text-decoration: none;
+  color: #000000;
+}
+
 /* 테이블 이동 버튼 */
 .noticeNumBtn {
   width: 30px;
@@ -34,4 +39,24 @@
   background-color: rgb(117, 162, 255);;
   color: #ffffff;
   text-shadow: 1px 1px 1px #000000;
+}
+
+/* 공지사항 상세 정보 */
+#noticeDetailTable {
+  width: 100%;
+  text-align: left;
+}
+
+#noticeDetailTable td {
+  border-left: 1px solid #989898ca;
+  border-bottom: 1px solid #989898ca;
+  padding: 13px;
+}
+
+#noticeDetailTable td:first-child {
+  border-left: none;
+}
+
+#noticeDetailTable > tbody > tr:first-child > td:first-child {
+  background-color: #aac6ff62;
 }
