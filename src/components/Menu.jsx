@@ -56,11 +56,6 @@ const Menu = (props) => {
               <li>
                 <Link to="/app">어울링 앱 소개</Link>
               </li>
-              <li>
-                <a href="https://www.sejongbike.kr/usage/bikeUsage">
-                  자전거이용정보
-                </a>
-              </li>
             </ul>
           </li>
           <li>
@@ -79,6 +74,11 @@ const Menu = (props) => {
               <li>
                 <a href="https://www.sejongbike.kr/customer/faq">
                   자주하는질문
+                </a>
+              </li>
+              <li>
+                <a href="https://www.sejongbike.kr/usage/bikeUsage">
+                  자전거이용정보
                 </a>
               </li>
             </ul>
