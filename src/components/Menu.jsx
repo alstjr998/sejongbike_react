@@ -77,9 +77,7 @@ const Menu = (props) => {
                 </a>
               </li>
               <li>
-                <a href="https://www.sejongbike.kr/usage/bikeUsage">
-                  자전거이용정보
-                </a>
+                <Link to="/bikeusage">자전거이용정보</Link>
               </li>
             </ul>
           </li>

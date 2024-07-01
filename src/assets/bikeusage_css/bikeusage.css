@@ -1,0 +1,8 @@
+/* 자전거 이용정보 페이지 */
+#bikeUsageList {
+  width: 98%;
+}
+
+#bikeUsageList > li {
+  padding: 1px;
+}
