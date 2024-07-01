@@ -16,7 +16,7 @@ import Insurance from "./Insurance";
 import MyPage from "./MyPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Logout from "./components/loginpage/Logout";
+import Logout from "./components/loginpage/MyMenu";
 import Notice from "./Notice";
 import NoticeDetail from "./components/noticepage/NoticeDetail";
 import BikeUsage from "./BikeUsage";
@@ -97,7 +97,7 @@ const Outlet = () => {
           <Route path="/bikeusage" element={<BikeUsage /> } />
 
           <Route path="/login" element={<Login onLogin={handleLogin} backendUrl={BACK_END_BASE_URL} />} />
-          <Route path="/logout" element={<Logout />} />
+          <Route path="/logout" element={<PrivateRoute element={<Logout />} />} />
           <Route path="/mypage" element={<PrivateRoute element={<MyPage />} />} />
         </Routes>
       </Router>

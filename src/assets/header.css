@@ -79,12 +79,8 @@ header > #menuButton {
   border: none;
 }
 
-#nav > ul > #logout > .textBox:last-child {
+#nav > ul > #myInfo > .textBox {
   border: none;
-}
-
-#nav > ul > #logout > .textBox {
-  
 }
 
 #nav > ul > li > div > a {
@@ -97,7 +93,8 @@ header > #menuButton {
 }
 
 #nav #ul_menu1,
-#nav #ul_menu2 {
+#nav #ul_menu2,
+#nav #ul_menu3 {
   display: none;
   width: 100%;
   position: absolute;
@@ -113,7 +110,8 @@ header > #menuButton {
 }
 
 #nav #ul_menu1:after,
-#nav #ul_menu2:after {
+#nav #ul_menu2:after,
+#nav #ul_menu3:after {
   content: "";
   position: absolute;
   top: -20px;
@@ -128,6 +126,10 @@ header > #menuButton {
 
 #nav #ul_menu2:after {
   left: 46px;
+}
+
+#nav #ul_menu3:after {
+  left: 40px;
 }
 
 #nav ul > li > ul > li {
@@ -152,7 +154,8 @@ header > #menuButton {
 }
 
 #nav > ul #li_menu1:hover > #ul_menu1,
-#nav > ul #li_menu2:hover > #ul_menu2 {
+#nav > ul #li_menu2:hover > #ul_menu2,
+#nav > ul #myInfo:hover > #ul_menu3 {
   display: block;
   z-index: 10;
 }

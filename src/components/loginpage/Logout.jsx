@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 const Logout = (props) => {
 
   const navigate = useNavigate();
-
+  
   const handleLogout = async () => {
     const token = localStorage.getItem("accessToken");
 

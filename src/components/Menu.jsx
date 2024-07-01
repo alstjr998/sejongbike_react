@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import MyMenu from "./loginpage/MyMenu";
 import Logout from "./loginpage/Logout";
 
 const Menu = (props) => {
@@ -80,10 +81,18 @@ const Menu = (props) => {
             </ul>
           </li>
           {props.isAuth ? (
-            <li id="logout">
+            <li id="myInfo">
               <div className="textBox">
-                <Logout onLogout={props.onLogout}  onClick={props.menuToggle}/>
+                <MyMenu onClick={props.menuToggle}/>
               </div>
+              <ul id="ul_menu3">
+                <li>
+                  <Link to="/mypage">내 정보</Link>
+                </li>
+                <li>
+                  <Logout onLogout={props.onLogout} />
+                </li>
+              </ul>
             </li>
           ) : (
             <li id="login">
