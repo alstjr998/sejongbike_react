@@ -39,7 +39,6 @@ const Login = (props) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-          url: `http://localhost:8080/mypage`,
       });
 
       if (response.ok) {
@@ -54,7 +53,7 @@ const Login = (props) => {
         }
       } else {
         setError("로그인 실패! 아이디나 비밀번호를 확인하세요.");
-        alert(error);
+        alert("로그인 실패! 아이디나 비밀번호를 확인하세요.");
       }
     } catch (error) {
       setError("로그인 실패! 서버 오류가 발생했습니다.");
