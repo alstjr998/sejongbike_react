@@ -34,7 +34,7 @@ const Menu = (props) => {
           <img src="/img/menuButton.png" alt="menu button" />
         </a>
       </div>
-      <nav id="nav" className={props.menuVisible || isActive ? "menu active" : "menu"}>
+      <nav id="nav" className={props.menuVisible ? "menu active" : "menu"}>
         <ul>
           <li id="li_menu1">
             <div className="textBox">
@@ -54,7 +54,7 @@ const Menu = (props) => {
                 <Link to="/insurance">시민자전거보험</Link>
               </li>
               <li>
-                <Link to="/app">어울링 앱 소개</Link>
+                <Link to="/appinfo">어울링 앱 소개</Link>
               </li>
             </ul>
           </li>
@@ -72,9 +72,7 @@ const Menu = (props) => {
                 <Link to="/notice">공지사항</Link>
               </li>
               <li>
-                <a href="https://www.sejongbike.kr/customer/faq">
-                  자주하는질문
-                </a>
+                <Link to="/faq">자주하는질문</Link>
               </li>
               <li>
                 <Link to="/bikeusage">자전거이용정보</Link>

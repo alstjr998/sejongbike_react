@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const DropdownMenuEouling = (props) => {
+const DropdownMenuCustomer = (props) => {
 
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
@@ -17,13 +17,11 @@ const DropdownMenuEouling = (props) => {
       <div id="responsiveMenuDropdown" onClick={dropdownToggle}>
         <p style={{width: "80%"}}>{props.pageName}</p>
         <p className={dropdownVisible ? 'dropdownBtn active' : 'dropdownBtn'}>▶</p>
-        <nav id="dropdownEouling" className={dropdownVisible ? 'dropdown active' : 'dropdown'}>
+        <nav id="dropdownCustomer" className={dropdownVisible ? 'dropdown active' : 'dropdown'}>
           <ul>
-            <li><Link to="/eoulinginfo">어울링소개</Link></li>
-            <li><Link to="/serviceinfo">서비스안내</Link></li>
-            <li><Link to="/duty">의무와 책임</Link></li>
-            <li><Link to="/insurance">시민자전거보험</Link></li>
-            <li><Link to="/app">어울링 앱 소개</Link></li>
+            <li><Link to="/notice">공지사항</Link></li>
+            <li><Link to="/faq">자주하는질문</Link></li>
+            <li><Link to="/bikeusage">자전거이용정보</Link></li>
           </ul>
         </nav>
       </div>
@@ -31,4 +29,4 @@ const DropdownMenuEouling = (props) => {
   );
 };
 
-export default DropdownMenuEouling;
+export default DropdownMenuCustomer;

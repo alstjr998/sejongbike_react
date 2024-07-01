@@ -52,10 +52,11 @@ const Login = (props) => {
           setError("Authorization 헤더가 없거나 형식이 잘못되었습니다.");
         }
       } else {
-        setError("로그인 실패: 아이디나 비밀번호를 확인하세요.");
+        setError("로그인 실패! 아이디나 비밀번호를 확인하세요.");
+        alert(error);
       }
     } catch (error) {
-      setError("로그인 실패: 서버 오류가 발생했습니다.");
+      setError("로그인 실패! 서버 오류가 발생했습니다.");
     } finally {
       setLoading(false);
     }

@@ -16,7 +16,7 @@ const Header = (props) => {
     <header>
       <div id="leftBlank"></div>
       <div id="logo">
-        <Link to="/" onClick={menuToggle}>
+        <Link to="/">
           <img src="/img/logo.png" alt="logo" />
           <p>어울링</p>
         </Link>
