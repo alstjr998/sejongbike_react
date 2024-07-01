@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const MyMenu = () => {
+const MyMenu = (props) => {
 
   const [name, setName] = useState("");
 
@@ -27,10 +27,10 @@ const MyMenu = () => {
 
       } catch (error) {
         console.error("조회 실패!", error);
+        props.onLogout();
       }
     }
   }
-
 
   return(
     <Link to="/">{name}</Link>

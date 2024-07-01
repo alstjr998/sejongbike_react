@@ -23,6 +23,32 @@
   color: #000000;
 }
 
+/* 글 작성 버튼 */
+.postBtnContainer {
+  display: flex;
+  justify-content: right;
+  margin: 0;
+}
+
+.postBtnContainer a {
+  margin: 0;
+}
+
+.postBtn {
+  margin: 5px;
+  width: 65px;
+  height: 35px;
+  background-color: #ffffff;
+  border: .5px solid #45454595;
+  font-size: 18px;
+  border-radius: 3px;
+}
+
+.postBtn:hover {
+  background-color: #90aae8ca;
+  color: #ffffff;
+}
+
 /* 테이블 이동 버튼 */
 .noticeNumBtn {
   width: 30px;
@@ -73,4 +99,37 @@
   background-color: #90909077;
   border: 1px solid #b2b2b2b3;
   border-radius: 5px;
+}
+
+/* 글 작성 화면 */
+#articleInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+#titleInput {
+  margin: 5px;
+  width: 100%;
+  height: 45px;
+  border: none;
+  background-color: #dddddd41;
+  padding: 9px 9px 7px;
+  font-size: 17px;
+  border-radius: 8px;
+}
+
+#titleInput::placeholder {
+  color: #a1a1a1;
+}
+
+#contentInput {
+  margin: 5px;
+  width: 100%;
+  height: 400px;
+  padding: 10px;
+  font-size: 15px;
+  font-family: 'NanumSquareRound', sans-serif;
+  border: 1px solid #6a6a6a4a;
+
 }

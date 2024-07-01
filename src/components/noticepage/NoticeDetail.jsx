@@ -23,8 +23,8 @@ const NoticeDetail = (props) => {
 
       const formattedData = {
         ...response.data,
-        subTime: response.data.subTime.replace('T', ' '),
-        updateTime: response.data.updateTime.replace('T', ' ')
+        subTime: response.data.subTime.replace('T', ' ').replace(/\.\d{6}$/, ''),
+        updateTime: response.data.updateTime.replace('T', ' ').replace(/\.\d{6}$/, '')
       };
 
       setNotice(formattedData);

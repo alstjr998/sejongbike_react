@@ -6,10 +6,12 @@ import { Link } from "react-router-dom";
 const NoticeContent = (props) => {
 
   const [noticeList, setNoticeList] = useState([]);
+  const [role, setRole] = useState("");
   const [error, setError] = useState("");
 
   useEffect(() => {
     getNotice();
+    getRole();
   }, []);
 
   const getNotice = async () => {
@@ -21,14 +23,35 @@ const NoticeContent = (props) => {
 
       const formattedData = response.data.map(notice => ({
         ...notice,
-        subTime: notice.subTime.replace('T', ' '),
-        updateTime: notice.updateTime.replace('T', ' ')
+        subTime: notice.subTime.replace('T', ' ').replace(/\.\d{6}$/, ''),
+        updateTime: notice.updateTime.replace('T', ' ').replace(/\.\d{6}$/, '')
       }));
 
       setNoticeList(formattedData);
 
     } catch (error) {
       setError("공지사항을 불러오는 데 실패했습니다.")
+    }
+  };
+
+  const getRole = async () => {
+    const token = localStorage.getItem("accessToken");
+
+    if (token) {
+      try{
+        const response = await axios({
+          method: "GET",
+          url: `${props.backendUrl}/mypage`,
+          headers: {
+            "Authorization": `Bearer ${token}`,
+          },
+        });
+
+        setRole(response.data.role);
+
+      } catch (error) {
+        setError("권한을 불러오는 데 실패했습니다.")
+      }
     }
   };
   
@@ -76,6 +99,17 @@ const NoticeContent = (props) => {
               ))}
             </tbody>
           </table>
+          {role === "ADMIN" ? (
+            <div className="postBtnContainer">
+              <Link to="/noticepost">
+                <button className="postBtn">
+                  <p>작성</p>
+                </button>
+              </Link>
+            </div>
+          ) : (
+            <div />
+          )}
           <div className="pageBtn">
             {Array.from({ length: totalPages }, (_, index) => (
               <button className="noticeNumBtn"
