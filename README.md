@@ -41,7 +41,10 @@
 
 ## 스크린샷
 
-<https://github.com/alstjr998/sejongbike_react/assets/164319650/b054cef4-d8b1-49e8-ac5d-ae123f70d74d>
+
+<p align="center">
+  <img src="https://github.com/alstjr998/sejongbike_react/assets/164319650/b054cef4-d8b1-49e8-ac5d-ae123f70d74d">
+</p>
 
 ---
 
