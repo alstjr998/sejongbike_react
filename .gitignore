@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 
 .env
+
+테스트용 JSON.txt
