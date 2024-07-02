@@ -42,10 +42,10 @@ const NoticeContent = (props) => {
       try{
         const response = await axios({
           method: "GET",
-          url: `${props.backendUrl}/mypage`,
           headers: {
             "Authorization": `Bearer ${token}`,
           },
+          url: `${props.backendUrl}/mypage`,
         });
 
         setRole(response.data.role);

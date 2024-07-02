@@ -32,7 +32,7 @@ const MyMenu = (props) => {
   };
 
   return(
-    <Link to="/">{name}</Link>
+    <Link to="/mypage">{name}</Link>
   );
 };
 

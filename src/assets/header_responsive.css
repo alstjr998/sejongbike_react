@@ -59,7 +59,8 @@
     border: none;
   }
   #nav > ul #li_menu1:hover > #ul_menu1,
-  #nav > ul #li_menu2:hover > #ul_menu2 {
+  #nav > ul #li_menu2:hover > #ul_menu2,
+  #nav > ul #myInfo:hover > #ul_menu3 {
     display: none;
   }
   #nav > ul > li > div > a {

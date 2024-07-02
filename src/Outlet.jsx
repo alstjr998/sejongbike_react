@@ -20,7 +20,7 @@ import MyMenu from "./components/loginpage/MyMenu";
 import Notice from "./Notice";
 import NoticeDetail from "./components/noticepage/NoticeDetail";
 import BikeUsage from "./BikeUsage";
-import Faq from "./components/Faq";
+import Faq from "./Faq";
 import NoticePost from "./components/noticepage/NoticePost";
 import Logout from "./components/loginpage/Logout";
 import AppInfo from "./AppInfo";
