@@ -1,0 +1,36 @@
+#appText {
+  width: 50%;
+  margin: 10px;
+}
+
+#appText > h1 {
+  font-size: 58px;
+  font-weight: 800;
+  text-shadow: 0px 0px 10px #a9a9a97e;
+  margin-bottom: 10px;
+}
+
+#appText > p {
+  font-size: 20px;
+}
+
+#appBadge {
+  width: 100%;
+  display: flex;
+}
+
+#appBadge a {
+  margin: 0;
+}
+
+#appBadge img {
+  width: 150px;
+  margin: 10px 10px 10px 0;
+}
+
+#iconImg {
+  height: 230px;
+  margin: 0;
+  border-radius: 30px;
+  filter: drop-shadow(5px 5px 10px #3c3c3c6c);
+}
