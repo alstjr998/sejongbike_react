@@ -39,6 +39,13 @@
 
 ---
 
+## 스크린샷
+
+<https://github.com/alstjr998/sejongbike_react/assets/164319650/b054cef4-d8b1-49e8-ac5d-ae123f70d74d>
+
+---
+
+
 ## 참고 사이트
 
 1. CSS 애니메이션 (Ease) 작성 시 참고한 애니메이션 그래프 툴 사이트 (<https://matthewlein.com/tools/ceaser>)
