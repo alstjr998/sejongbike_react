@@ -83,7 +83,7 @@ const Menu = (props) => {
           {props.isAuth ? (
             <li id="myInfo">
               <div className="textBox">
-                <MyMenu onClick={props.menuToggle} onLogout={props.onLogout} />
+                <MyMenu onClick={props.menuToggle} onLogout={props.onLogout} backendUrl={props.backendUrl} />
               </div>
               <ul id="ul_menu3">
                 <li>

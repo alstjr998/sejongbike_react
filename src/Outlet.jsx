@@ -83,9 +83,9 @@ const Outlet = () => {
   return (
     <>
       <Router>
-        <Header isAuth={isAuth} onLogout={handleLogout}/>
+        <Header isAuth={isAuth} onLogout={handleLogout} backendUrl={BACK_END_BASE_URL} />
         <Routes>
-          <Route index element={<MainPage backendUrl={BACK_END_BASE_URL}/>} />
+          <Route index element={<MainPage backendUrl={BACK_END_BASE_URL} />} />
           <Route path="/eoulinginfo" element={<EoulingInfo />} />
           <Route path="/serviceinfo" element={<ServiceInfo />} />
           <Route path="/duty" element={<Duty />} />
@@ -93,7 +93,7 @@ const Outlet = () => {
 
           <Route path="/dockfind" element={<DockFind />} />
 
-          <Route path="/notice" element={<Notice backendUrl={BACK_END_BASE_URL} />} />
+          <Route path="/notice" element={<Notice   />} />
           <Route path="/notice/:id" element={<NoticeDetail backendUrl={BACK_END_BASE_URL} />} />
           <Route path="/noticepost" element={<PrivateRoute element={NoticePost} backendUrl={BACK_END_BASE_URL} />} />
           <Route path="/faq" element={<Faq />} />
@@ -101,7 +101,7 @@ const Outlet = () => {
 
           <Route path="/login" element={<Login onLogin={handleLogin} backendUrl={BACK_END_BASE_URL} />} />
           <Route path="/logout" element={<PrivateRoute element={Logout} />} />
-          <Route path="/mypage" element={<PrivateRoute element={MyPage} />} />
+          <Route path="/mypage" element={<PrivateRoute element={MyPage} backendUrl={BACK_END_BASE_URL} />} />
         </Routes>
       </Router>
       <Footer />

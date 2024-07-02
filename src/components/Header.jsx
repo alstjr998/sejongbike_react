@@ -21,7 +21,7 @@ const Header = (props) => {
           <p>어울링</p>
         </Link>
       </div>
-      <Menu isAuth={props.isAuth} onLogout={props.onLogout} menuVisible={menuVisible} menuToggle={menuToggle}/>
+      <Menu isAuth={props.isAuth} onLogout={props.onLogout} menuVisible={menuVisible} menuToggle={menuToggle} backendUrl={props.backendUrl} />
     </header>
   );
 };

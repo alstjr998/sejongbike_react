@@ -15,22 +15,21 @@ const MyMenu = (props) => {
     
     if(token) {
       try {
-        const response = await axios("http://localhost:8080/mypage", {
+        const response = await axios({
           method: "GET",
           headers: {
             "Authorization": `Bearer ${token}`,
           },
-          url: `http://localhost:8080/mypage`,
+          url: `${props.backendUrl}/mypage`,
         });
 
         setName(response.data.name);
 
       } catch (error) {
         console.error("조회 실패!", error);
-        props.onLogout();
       }
     }
-  }
+  };
 
   return(
     <Link to="/">{name}</Link>
