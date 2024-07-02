@@ -23,6 +23,7 @@ import BikeUsage from "./BikeUsage";
 import Faq from "./components/Faq";
 import NoticePost from "./components/noticepage/NoticePost";
 import Logout from "./components/loginpage/Logout";
+import AppInfo from "./AppInfo";
 
 const BACK_END_BASE_URL = import.meta.env.MODE === 'development'
 ? 'http://localhost:8080'
@@ -90,10 +91,11 @@ const Outlet = () => {
           <Route path="/serviceinfo" element={<ServiceInfo />} />
           <Route path="/duty" element={<Duty />} />
           <Route path="/insurance" element={<Insurance />} />
+          <Route path="/appinfo" element={<AppInfo />} />
 
           <Route path="/dockfind" element={<DockFind />} />
 
-          <Route path="/notice" element={<Notice   />} />
+          <Route path="/notice" element={<Notice backendUrl={BACK_END_BASE_URL} />} />
           <Route path="/notice/:id" element={<NoticeDetail backendUrl={BACK_END_BASE_URL} />} />
           <Route path="/noticepost" element={<PrivateRoute element={NoticePost} backendUrl={BACK_END_BASE_URL} />} />
           <Route path="/faq" element={<Faq />} />

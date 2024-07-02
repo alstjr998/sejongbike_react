@@ -30,7 +30,8 @@ const NoticeContent = (props) => {
       setNoticeList(formattedData);
 
     } catch (error) {
-      setError("공지사항을 불러오는 데 실패했습니다.")
+      setError("공지사항을 불러오는 데 실패했습니다.");
+      console.log("에러");
     }
   };
 
@@ -50,7 +51,8 @@ const NoticeContent = (props) => {
         setRole(response.data.role);
 
       } catch (error) {
-        setError("권한을 불러오는 데 실패했습니다.")
+        setError("권한을 불러오는 데 실패했습니다.");
+        console.log("권한 에러");
       }
     }
   };
