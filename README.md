@@ -44,7 +44,7 @@
 
 <p align="center">
   <img width="500" src="https://github.com/alstjr998/sejongbike_react/assets/164319650/b054cef4-d8b1-49e8-ac5d-ae123f70d74d">
-  <img width="200" src="https://github.com/alstjr998/sejongbike_react/assets/164319650/fdb4adc4-e86c-446b-97c1-efe12db3f94e">
+  <img width="240" src="https://github.com/alstjr998/sejongbike_react/assets/164319650/fdb4adc4-e86c-446b-97c1-efe12db3f94e">
 </p>
 
 ---
