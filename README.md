@@ -14,7 +14,7 @@
 
 ---
 
-##제작 순서
+## 제작 순서
 
 1. React + CSS + JavaScript로 메인 페이지 제작
 
@@ -39,7 +39,7 @@
 
 ---
 
-##참고 사이트
+## 참고 사이트
 
 1. CSS 애니메이션 (Ease) 작성 시 참고한 애니메이션 그래프 툴 사이트 (<https://matthewlein.com/tools/ceaser>)
 
