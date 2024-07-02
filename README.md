@@ -36,6 +36,7 @@
 
 #### 6. Spring Security와 JWT를 기반으로 한 로그인/로그아웃 기능 구현
 
+  ※연결된 API는 개인 스프링부트 프로젝트 API입니다. (<https://github.com/alstjr998/sejongbike_springboot>)
 
 ---
 
