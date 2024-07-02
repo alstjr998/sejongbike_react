@@ -16,25 +16,25 @@
 
 ## 제작 순서
 
-1. React + CSS + JavaScript로 메인 페이지 제작
+#### 1. React + CSS + JavaScript로 메인 페이지 제작
 
-2. 메인 페이지에 OpenWeatherMap API를 이용하여 오늘의 날씨 정보를 표시하는 블록 완성
+#### 2. 메인 페이지에 OpenWeatherMap API를 이용하여 오늘의 날씨 정보를 표시하는 블록 완성
 
   ※OpenWeatherMap API (<https://openweathermap.org/>)
 
   ※날씨 아이콘 활용 basmilus-Meteocons (<https://github.com/basmilius/weather-icons>)
 
-3. 메인 페이지 완성 후 애니메이션을 활용하여 추가 페이지 제작
+#### 3. 메인 페이지 완성 후 애니메이션을 활용하여 추가 페이지 제작
 
-4. 회원 정보 및 공지사항 게시판을 연결하는 데이터베이스 Back-end API 연결 작업
+#### 4. 회원 정보 및 공지사항 게시판을 연결하는 데이터베이스 Back-end API 연결 작업
 
-5. 대여소 위치 조회를 위해 Naver Maps API와 세종시 어울링 대여소 현황 API를 받아 Marker로 표시하는 화면 제작
+#### 5. 대여소 위치 조회를 위해 Naver Maps API와 세종시 어울링 대여소 현황 API를 받아 Marker로 표시하는 화면 제작
 
   ※Naver Maps API (<https://www.ncloud.com/product/applicationService/maps>)
 
   ※세종시 어울링 대여소 위치 API - 2022.08.30 기준 (<https://www.data.go.kr/data/15091421/fileData.do#tab-layer-openapi>)
 
-6. Spring Security와 JWT를 기반으로 한 로그인/로그아웃 기능 구현
+#### 6. Spring Security와 JWT를 기반으로 한 로그인/로그아웃 기능 구현
 
 
 ---
