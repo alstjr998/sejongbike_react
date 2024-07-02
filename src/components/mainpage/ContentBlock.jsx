@@ -40,7 +40,7 @@ const ContentBlock = (props) => {
           <Link to="/notice">+더보기</Link>
         </div>
         <div id="plusButton_question" className="plusButton">
-          <a href="https://www.sejongbike.kr/customer/faq">+더보기</a>
+          <Link to="/faq">+더보기</Link>
         </div>
         <div id="noticetab" className="tabContent">
           <ul>
@@ -53,11 +53,11 @@ const ContentBlock = (props) => {
         </div>
         <div id="questiontab" className="tabContent">
           <ul>
-            <li><a href="">기본 대여시간 초과 시 추가요금은?</a></li>
-            <li><a href="">어울링 자전거 이용 비용은?</a></li>
-            <li><a href="">대여소는 무엇이며 어디에 있나요?</a></li>
-            <li><a href="">어울링 자전거란 무엇인가요?</a></li>
-            <li><a href="">어울링 초과요금은 어떻게 되나요? 휴대폰 소액결제를 차단해도 되나요?</a></li>
+            <li><Link to="/faq">기본 대여시간 초과 시 추가요금은 얼마인가요?</Link></li>
+            <li><Link to="/faq">어울링 자전거 이용 비용은 얼마인가요?</Link></li>
+            <li><Link to="/faq">대여소는 무엇이며 어디에 있나요?</Link></li>
+            <li><Link to="/faq">어울링 자전거란 무엇인가요?</Link></li>
+            <li><Link to="/faq">자전거를 대여한 곳에만 반납해야 하나요?</Link></li>
           </ul>
         </div>
       </div>

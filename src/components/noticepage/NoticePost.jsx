@@ -30,8 +30,8 @@ const NoticePost = (props) => {
         data: JSON.stringify({ ...formData, content: contentWithBr }),
         url: `${props.backendUrl}/notice/request`,
       });
-      if (response.ok) {
-        navigate("/notice", { replace: true });
+      if (response.status === 200) {
+        navigate('/notice', { replace: true });
       } else {
         setError("공지사항 작성 실패.");
       }
@@ -58,6 +58,8 @@ const NoticePost = (props) => {
           id="titleInput"
           name="title"
           placeholder="제목을 입력해 주세요."
+          autoComplete="off"
+          spellCheck="false"
           value={formData.title}
           onChange={handleChange}
           required
@@ -67,6 +69,7 @@ const NoticePost = (props) => {
           id="contentInput"
           name="content"
           placeholder="내용을 입력해 주세요."
+          spellCheck="false"
           value={formData.content}
           onChange={handleChange}
           required
