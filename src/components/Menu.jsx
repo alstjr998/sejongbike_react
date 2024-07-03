@@ -55,7 +55,7 @@ const Menu = (props) => {
                 <Link to="/insurance">시민자전거보험</Link>
               </li>
               <li>
-                <Link to="/appinfo">어울링 앱 소개</Link>
+                <Link to="/appinfo">어울링 앱 설치</Link>
               </li>
             </ul>
           </li>

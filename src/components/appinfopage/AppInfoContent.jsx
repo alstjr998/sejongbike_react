@@ -5,7 +5,7 @@ const AppInfoContent = () => {
     <>
       <div id="pageTitle">
         <div>
-          <p>어울링 앱 소개</p>
+          <p>어울링 앱 설치</p>
         </div>
         <hr />
       </div>
