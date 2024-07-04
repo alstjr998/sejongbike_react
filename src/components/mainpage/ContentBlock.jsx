@@ -3,7 +3,7 @@ import '../../assets/mainpage_css/contentblock.css';
 import '../../assets/mainpage_css/contentblock_responsive.css';
 import Weather from './Weather';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import axiosWithOutAuth from '../../util/axiosWithoutAuth';
 
 const ContentBlock = (props) => {
   const [noticeList, setNoticeList] = useState([]);
@@ -15,10 +15,7 @@ const ContentBlock = (props) => {
 
   const getNotice = async () => {
     try{
-      const response = await axios({
-        method: "GET",
-        url: `${props.backendUrl}/notice`,
-      });
+      const response = await axiosWithOutAuth(`${props.backendUrl}/notice`);
 
       setNoticeList(response.data);
 

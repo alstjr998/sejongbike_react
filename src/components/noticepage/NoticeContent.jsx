@@ -1,7 +1,8 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import '../../assets/noice_css/notice.css';
 import { Link } from "react-router-dom";
+import axiosWithOutAuth from "../../util/axiosWithoutAuth";
+import axiosWithAuth from "../../util/axiosWithAuth";
 
 const NoticeContent = (props) => {
 
@@ -16,10 +17,7 @@ const NoticeContent = (props) => {
 
   const getNotice = async () => {
     try{
-      const response = await axios({
-        method: "GET",
-        url: `${props.backendUrl}/notice`,
-      });
+      const response = await axiosWithOutAuth(`${props.backendUrl}/notice`);
 
       const formattedData = response.data.map(notice => ({
         ...notice,
@@ -35,18 +33,13 @@ const NoticeContent = (props) => {
     }
   };
 
-  const getRole = async () => {
-    const token = localStorage.getItem("accessToken");
-
-    if (token) {
+  const getRole = async () => { 
+    let token = localStorage.getItem("accessToken");
+    if (!token) {
+      return;
+    } else {
       try{
-        const response = await axios({
-          method: "GET",
-          headers: {
-            "Authorization": `Bearer ${token}`,
-          },
-          url: `${props.backendUrl}/mypage`,
-        });
+        const response = await axiosWithAuth(`${props.backendUrl}/mypage`);
 
         setRole(response.data.role);
 

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axiosWithAuth from "../../util/axiosWithAuth";
 
 const MyMenu = (props) => {
 
@@ -11,23 +12,13 @@ const MyMenu = (props) => {
   }, []);
   
   const getName = async () => {
-    const token = localStorage.getItem("accessToken");
-    
-    if(token) {
-      try {
-        const response = await axios({
-          method: "GET",
-          headers: {
-            "Authorization": `Bearer ${token}`,
-          },
-          url: `${props.backendUrl}/mypage`,
-        });
+    try {
+      const response = await axiosWithAuth(`${props.backendUrl}/mypage`);
 
-        setName(response.data.name);
+      setName(response.data.name);
 
-      } catch (error) {
-        console.error("조회 실패!", error);
-      }
+    } catch (error) {
+      console.error("조회 실패!", error);
     }
   };
 

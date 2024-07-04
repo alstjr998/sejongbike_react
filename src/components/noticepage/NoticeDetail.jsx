@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import axios from "axios";
 import ReactHtmlParser from 'react-html-parser';
+import axiosWithOutAuth from "../../util/axiosWithoutAuth";
 
 const NoticeDetail = (props) => {
   const { id } = useParams();
@@ -16,10 +16,7 @@ const NoticeDetail = (props) => {
 
   const getNoticeDetail = async () => {
     try {
-      const response = await axios({
-        method: "GET",
-        url: `${props.backendUrl}/notice/${id}`,
-      });
+      const response = await axiosWithOutAuth(`${props.backendUrl}/notice/${id}`);
 
       const formattedData = {
         ...response.data,

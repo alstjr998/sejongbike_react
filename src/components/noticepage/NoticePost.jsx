@@ -1,6 +1,6 @@
-import axios from "axios";
 import { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import axiosWithAuth from "../../util/axiosWithAuth";
 
 const NoticePost = (props) => {
 
@@ -22,14 +22,11 @@ const NoticePost = (props) => {
     setError("");
 
     try {
-      const response = await axios({
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        data: JSON.stringify({ ...formData, content: contentWithBr }),
-        url: `${props.backendUrl}/notice/request`,
-      });
+      const response = await axiosWithAuth(
+        `${props.backendUrl}/notice/request`,
+        'POST',
+        { ...formData, content: contentWithBr }
+      );
       if (response.status === 200) {
         navigate('/notice', { replace: true });
       } else {
