@@ -28,3 +28,4 @@ dist-ssr
 테스트용 JSON.txt
 *.pptx
 *.docx
+*.pdf
