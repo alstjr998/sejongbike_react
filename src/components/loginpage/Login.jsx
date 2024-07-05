@@ -35,6 +35,7 @@ const Login = (props) => {
     try {
       const response = await fetch(`${props.backendUrl}/login`, {
         method: "POST",
+        credentials: 'include',
         headers: {
           "Content-Type": "application/json",
         },
