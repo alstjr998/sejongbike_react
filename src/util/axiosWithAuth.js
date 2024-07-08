@@ -14,7 +14,7 @@ const axiosWithAuth = async (url, method = 'GET', data = null, options = {}) => 
       url: url,
       method: method,
       withCredentials: true,
-      data: method === 'POST' ? data : null,
+      data: (method === 'POST' || method === 'PUT' || method === 'DELETE') ? data : null,
       ...options,
       headers: {
         ...options.headers,
@@ -47,7 +47,7 @@ const axiosWithAuth = async (url, method = 'GET', data = null, options = {}) => 
         const retryResponse = await axios({
           url: url,
           method: method,
-          data: method === 'POST' ? data : null,
+          data: (method === 'POST' || method === 'PUT' || method === 'DELETE') ? data : null,
           ...options,
           headers: {
             ...options.headers,
