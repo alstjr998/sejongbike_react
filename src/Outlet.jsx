@@ -24,6 +24,7 @@ import Faq from "./Faq";
 import NoticePost from "./components/noticepage/NoticePost";
 import Logout from "./components/loginpage/Logout";
 import AppInfo from "./AppInfo";
+import NoticeUpdate from "./components/noticepage/NoticeUpdate";
 
 const BACK_END_BASE_URL = import.meta.env.MODE === 'development'
 ? 'http://localhost:8080'
@@ -98,6 +99,7 @@ const Outlet = () => {
           <Route path="/notice" element={<Notice backendUrl={BACK_END_BASE_URL} />} />
           <Route path="/notice/:id" element={<NoticeDetail backendUrl={BACK_END_BASE_URL} />} />
           <Route path="/noticepost" element={<PrivateRoute element={NoticePost} backendUrl={BACK_END_BASE_URL} />} />
+          <Route path="/noticeupdate/:id" element={<PrivateRoute element={NoticeUpdate} backendUrl={BACK_END_BASE_URL} />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/bikeusage" element={<BikeUsage /> } />
 

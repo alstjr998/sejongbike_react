@@ -35,6 +35,26 @@ const NoticeDetail = (props) => {
     }
   };
 
+  const deleteContent = async () => { 
+    const confirmDelete = window.confirm("삭제하시겠습니까?");
+    if (!confirmDelete) {
+      return
+    }
+
+    let token = localStorage.getItem("accessToken");
+    if (!token) {
+      return;
+    } else {
+      try{
+        await axiosWithAuth(`${props.backendUrl}/notice/request/${id}`, 'DELETE');
+        gotoList();
+      } catch (error) {
+        setError("삭제하는 데 실패했습니다.");
+        console.log("에러");
+      }
+    }
+  };
+
   const getRole = async () => { 
     let token = localStorage.getItem("accessToken");
     if (!token) {
@@ -51,6 +71,8 @@ const NoticeDetail = (props) => {
       }
     }
   };
+
+  
 
   if (error) {
     return <p>{error}</p>;
@@ -103,12 +125,12 @@ const NoticeDetail = (props) => {
 
         {role === "ADMIN" ? (
           <div className="detailBtnContainer">
-            <Link to="/noticeupdate">
-              <button className="postBtn">
+            <Link to={`/noticeupdate/${id}`}>
+              <button className="requestBtn" id="updateBtn">
                 <p>수정</p>
               </button>
             </Link>
-            <button className="postBtn">
+            <button onClick={deleteContent} className="requestBtn" id="deleteBtn">
               <p>삭제</p>
             </button>
           </div>

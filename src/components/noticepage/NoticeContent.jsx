@@ -97,7 +97,7 @@ const NoticeContent = (props) => {
           {role === "ADMIN" ? (
             <div className="postBtnContainer">
               <Link to="/noticepost">
-                <button className="postBtn">
+                <button className="requestBtn">
                   <p>작성</p>
                 </button>
               </Link>

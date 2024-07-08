@@ -34,7 +34,7 @@
   margin: 0;
 }
 
-.postBtn {
+.requestBtn {
   margin: 5px;
   width: 65px;
   height: 35px;
@@ -44,7 +44,7 @@
   border-radius: 3px;
 }
 
-.postBtn:hover {
+.requestBtn:hover {
   background-color: #90aae8ca;
   color: #ffffff;
 }

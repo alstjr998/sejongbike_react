@@ -72,7 +72,7 @@ const NoticePost = (props) => {
           required
           />
           <div className="postBtnContainer">
-            <button type="submit" className="postBtn">
+            <button type="submit" className="requestBtn">
               <p style={{fontSize: "14px"}}>작성 완료</p>
             </button>
           </div>

@@ -14,7 +14,7 @@ const axiosWithAuth = async (url, method = 'GET', data = null, options = {}) => 
       url: url,
       method: method,
       withCredentials: true,
-      data: (method === 'POST' || method === 'PUT' || method === 'DELETE') ? data : null,
+      data: (method === 'POST' || method === 'PATCH' || method === 'DELETE') ? data : null,
       ...options,
       headers: {
         ...options.headers,
