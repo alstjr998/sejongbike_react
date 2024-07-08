@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import '../../assets/noice_css/notice.css';
+import '../../assets/notice_css/notice.css';
 import { Link } from "react-router-dom";
 import axiosWithOutAuth from "../../util/axiosWithoutAuth";
 import axiosWithAuth from "../../util/axiosWithAuth";
